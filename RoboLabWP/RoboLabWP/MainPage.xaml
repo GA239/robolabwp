@@ -11,15 +11,20 @@
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
-    shell:SystemTray.IsVisible="True">
+    shell:SystemTray.IsVisible="False" Margin="0,-1,0,1">
 
-    <!--LayoutRoot представляет корневую сетку, где размещается все содержимое страницы
+    <!--LayoutRoot представляет корневую сетку, где размещается все содержимое страницы-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
-        <DrawingSurface x:Name="DrawingSurface" Loaded="DrawingSurface_Loaded" />
-    </Grid> -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
 
-    <!--LayoutRoot is the root grid where all page content is placed-->
-    <DrawingSurfaceBackgroundGrid x:Name="DrawingSurfaceBackground" Loaded="DrawingSurfaceBackground_Loaded">
+        <!--TitlePanel содержит имя приложения и заголовок страницы-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="Robo Lab" Margin="90,-7,10,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+        
         <StackPanel Orientation="Horizontal" Margin="10,0,0,0" Height="30" VerticalAlignment="Top">
             <TextBlock Text="Memory: "/>
             <TextBlock x:Name="MemoryTextBlock"/>
@@ -28,6 +33,11 @@
             <TextBlock x:Name="PeakMemoryTextBlock"/>
             <TextBlock Text=" MB"/>
         </StackPanel>
-    </DrawingSurfaceBackgroundGrid>
+        
+        <!--ContentPanel – поместите здесь дополнительное содержимое-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <Button Content="Start" HorizontalAlignment="Left" Margin="122,52,0,0" VerticalAlignment="Top" Width="207" Height="138" RenderTransformOrigin="0.483,0.486" Click="Button_Click"/>
 
+        </Grid>
+    </Grid>
 </phone:PhoneApplicationPage>

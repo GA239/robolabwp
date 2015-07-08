@@ -30,12 +30,17 @@ Direct3DInterop::Direct3DInterop()
 
 
 
-IDrawingSurfaceBackgroundContentProvider^ Direct3DInterop::CreateContentProvider()
+IDrawingSurfaceContentProvider^ Direct3DInterop::CreateContentProvider()
+{
+    ComPtr<Direct3DContentProvider> provider = Make<Direct3DContentProvider>(this);
+    return reinterpret_cast<IDrawingSurfaceContentProvider^>(provider.Get());
+}
+
+IDrawingSurfaceBackgroundContentProvider^ Direct3DInterop::CreateBackgroundContentProvider()
 {
     ComPtr<Direct3DContentProvider> provider = Make<Direct3DContentProvider>(this);
     return reinterpret_cast<IDrawingSurfaceBackgroundContentProvider^>(provider.Get());
 }
-
 
 
 // IDrawingSurfaceManipulationHandler
@@ -124,12 +129,8 @@ HRESULT Direct3DInterop::Draw(_In_ ID3D11Device1* device, _In_ ID3D11DeviceConte
 {
     m_renderer->UpdateDevice(device, context, renderTargetView);
 
-    if(mCurrentOrientation != WindowOrientation)
-    {
-        mCurrentOrientation = WindowOrientation;
-        m_renderer->OnOrientationChanged(mCurrentOrientation);
-    }
-
+    mCurrentOrientation = WindowOrientation;	
+	m_renderer->OnOrientationChanged(mCurrentOrientation);
     m_renderer->Render();
     RequestAdditionalFrame();
 

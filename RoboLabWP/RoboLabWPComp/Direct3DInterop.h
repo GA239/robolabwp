@@ -17,7 +17,8 @@ public ref class Direct3DInterop sealed : public Windows::Phone::Input::Interop:
 public:
     Direct3DInterop();
 
-	Windows::Phone::Graphics::Interop::IDrawingSurfaceBackgroundContentProvider^ CreateContentProvider();
+	Windows::Phone::Graphics::Interop::IDrawingSurfaceBackgroundContentProvider^ CreateBackgroundContentProvider();
+	Windows::Phone::Graphics::Interop::IDrawingSurfaceContentProvider^ CreateContentProvider();
 
     // IDrawingSurfaceManipulationHandler
     virtual void SetManipulationHost(Windows::Phone::Input::Interop::DrawingSurfaceManipulationHost^ manipulationHost);
@@ -33,6 +34,7 @@ public:
 
     property Windows::Graphics::Display::DisplayOrientations WindowOrientation;
 
+	//property Windows::Foundation::Size WindowBounds;
     property Windows::Foundation::Size NativeResolution;
     property Windows::Foundation::Size RenderResolution;
 

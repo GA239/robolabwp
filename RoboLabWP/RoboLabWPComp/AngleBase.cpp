@@ -75,6 +75,16 @@ void AngleBase::UpdateDevice(ID3D11Device1* device, ID3D11DeviceContext1* contex
     }
 }
 
+void AngleBase::UpdateForRenderResolutionChange(float width, float height)
+{
+	m_renderTargetSize.Width = width;
+	m_renderTargetSize.Height = height;
+
+	ID3D11RenderTargetView* nullViews[] = {nullptr};
+	m_d3dContext->OMSetRenderTargets(ARRAYSIZE(nullViews), nullViews, nullptr);
+	m_d3dContext->Flush();
+	CreateWindowSizeDependentResources();
+}
 
 void AngleBase::UpdateForWindowSizeChange(float width, float height)
 {
