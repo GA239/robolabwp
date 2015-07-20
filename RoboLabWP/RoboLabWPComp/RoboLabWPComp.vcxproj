@@ -143,7 +143,6 @@
     <ClInclude Include="Direct3DInterop.h" />
     <ClInclude Include="DirectXHelper.h" />
     <ClInclude Include="Direct3DContentProvider.h" />
-    <ClInclude Include="help.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>

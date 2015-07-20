@@ -20,4 +20,4 @@ C:\Users\AG\Documents\Visual Studio 2012\Projects\RoboLabWP\RoboLabWP\RoboLabWP\
 C:\Users\AG\documents\visual studio 2012\Projects\RoboLabWP\RoboLabWP\RoboLabWP\obj\ARM\Debug\XapCacheFile.xml
 C:\Users\AG\Documents\Visual Studio 2012\Projects\RoboLabWP\RoboLabWP\RoboLabWP\obj\ARM\Debug\RoboLabWP.csprojResolveAssemblyReference.cache
 C:\Users\AG\Documents\Visual Studio 2012\Projects\RoboLabWP\RoboLabWP\RoboLabWP\Bin\ARM\Debug\RoboLabWPComp.pdb
-C:\Users\AG\documents\visual studio 2012\Projects\RoboLabWP\RoboLabWP\RoboLabWP\obj\ARM\Debug\GamePage.g.cs
+C:\Users\AG\documents\visual studio 2012\Projects\RoboLabWP\RoboLabWP\RoboLabWP\obj\ARM\Debug\Pages\GamePage.g.cs

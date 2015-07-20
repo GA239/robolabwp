@@ -93,13 +93,23 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="LocalizedStrings.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="GamePage.xaml.cs">
-      <DependentUpon>GamePage.xaml</DependentUpon>
-    </Compile>
+    <Compile Include="Model\Basic Types\MZMacro.cs" />
+    <Compile Include="Model\Basic Types\MZByte.cs" />
+    <Compile Include="Model\Basic Types\MZMotion.cs" />
+    <Compile Include="Model\Basic Types\MZPosition.cs" />
+    <Compile Include="Model\Game\MZCell.cs" />
+    <Compile Include="Model\Game\MZCellMatrix.cs" />
+    <Compile Include="Model\Game\MZFlow.cs" />
+    <Compile Include="Model\Game\MZGame.cs" />
+    <Compile Include="Model\Game\MZMaze.cs" />
+    <Compile Include="Model\Game\MZVisitsMatrix.cs" />
+    <Compile Include="Model\MZApplicationData.cs" />
+    <Compile Include="Model\UserData\MZUserGameData.cs" />
+    <Compile Include="Model\UserData\Settings.cs" />
+    <Compile Include="Pages\GamePage.xaml.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\AppResources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -116,9 +126,9 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="GamePage.xaml">
-      <SubType>Designer</SubType>
+    <Page Include="Pages\GamePage.xaml">
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>
@@ -160,6 +170,7 @@
       <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

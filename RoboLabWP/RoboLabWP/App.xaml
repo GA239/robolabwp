@@ -5,10 +5,10 @@
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone">
 
-    <!--Ресурсы приложения-->
+    <!--Ресурсы приложения
     <Application.Resources>
-        <local:LocalizedStrings xmlns:local="clr-namespace:RoboLabWP" x:Key="LocalizedStrings"/>
-    </Application.Resources>
+        
+    </Application.Resources>-->
 
     <Application.ApplicationLifetimeObjects>
         <!--Обязательный объект, обрабатывающий события времени жизни приложения-->

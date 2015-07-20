@@ -31,7 +31,7 @@ namespace RoboLabWP
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("/GamePage.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("Pages/GamePage.xaml", UriKind.Relative));
         }
 
         private void StartTimer()

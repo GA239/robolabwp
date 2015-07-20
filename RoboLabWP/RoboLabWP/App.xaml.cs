@@ -23,12 +23,13 @@ using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 
-
+using RoboLabWP.Model.UserData;
 
 namespace RoboLabWP
 {
     public partial class App : Application
     {
+        public MZUserGameData UserGameData;      
         /// <summary>
         /// Обеспечивает быстрый доступ к корневому кадру приложения телефона.
         /// </summary>
