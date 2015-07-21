@@ -1,4 +1,4 @@
-﻿Сборка начата 20.07.2015 5:11:15.
+﻿Сборка начата 21.07.2015 20:02:04.
      1>Проект "C:\Users\AG\documents\visual studio 2012\Projects\RoboLabWP\RoboLabWP\RoboLabWPComp\RoboLabWPComp.vcxproj" в узле 3 (целевые объекты Rebuild).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\bin\x86_arm\CL.exe /c /I"C:\Users\AG\Downloads\angleproject-dev\samples\gles2_book\Common" /I"C:\Users\AG\Downloads\angleproject-dev\src\common" /I"C:\Users\AG\Downloads\angleproject-dev\include" /I"C:\Users\AG\documents\visual studio 2012\Projects\RoboLabWP\RoboLabWP\RoboLabWPComp\\" /I"Generated Files\\" /IARM\Debug\ /AI"C:\Program Files (x86)\Windows Phone Kits\8.0\Windows Metadata" /Zi /ZW /ZW:nostdlib /nologo /W3 /WX- /sdl /MP /Od /Oy- /D _WINRT_DLL /D GL_GLEXT_PROTOTYPES /D _WINDLL /D _UNICODE /D UNICODE /D _DEBUG /D WINAPI_FAMILY=WINAPI_FAMILY_PHONE_APP /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"pch.h" /Fp"ARM\Debug\RoboLabWPComp.pch" /Fo"ARM\Debug\\" /Fd"ARM\Debug\vc110.pdb" /Gd /TP /FU"C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\lib\arm\platform.winmd" /FU"C:\Program Files (x86)\Windows Phone Kits\8.0\Windows Metadata\Windows.winmd" /analyze- /errorReport:prompt pch.cpp
@@ -23,4 +23,4 @@
 
 Построение успешно завершено.
 
-Затраченное время: 00:00:11.85
+Затраченное время: 00:00:09.44

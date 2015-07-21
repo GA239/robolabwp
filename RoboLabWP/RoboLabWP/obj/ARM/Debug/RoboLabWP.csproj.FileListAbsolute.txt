@@ -1,5 +1,4 @@
 c:\users\ag\documents\visual studio 2012\Projects\RoboLabWP\RoboLabWP\RoboLabWP\obj\ARM\Debug\App.g.cs
-c:\users\ag\documents\visual studio 2012\Projects\RoboLabWP\RoboLabWP\RoboLabWP\obj\ARM\Debug\MainPage.g.cs
 c:\users\ag\documents\visual studio 2012\Projects\RoboLabWP\RoboLabWP\RoboLabWP\obj\ARM\Debug\RoboLabWP.g.resources
 c:\users\ag\documents\visual studio 2012\Projects\RoboLabWP\RoboLabWP\RoboLabWP\obj\ARM\Debug\RoboLabWP.Resources.AppResources.resources
 c:\users\ag\documents\visual studio 2012\Projects\RoboLabWP\RoboLabWP\RoboLabWP\obj\ARM\Debug\RoboLabWP.csproj.GenerateResource.Cache
@@ -21,3 +20,4 @@ C:\Users\AG\documents\visual studio 2012\Projects\RoboLabWP\RoboLabWP\RoboLabWP\
 C:\Users\AG\Documents\Visual Studio 2012\Projects\RoboLabWP\RoboLabWP\RoboLabWP\obj\ARM\Debug\RoboLabWP.csprojResolveAssemblyReference.cache
 C:\Users\AG\Documents\Visual Studio 2012\Projects\RoboLabWP\RoboLabWP\RoboLabWP\Bin\ARM\Debug\RoboLabWPComp.pdb
 C:\Users\AG\documents\visual studio 2012\Projects\RoboLabWP\RoboLabWP\RoboLabWP\obj\ARM\Debug\Pages\GamePage.g.cs
+C:\Users\AG\documents\visual studio 2012\Projects\RoboLabWP\RoboLabWP\RoboLabWP\obj\ARM\Debug\Pages\MainPage.g.cs
