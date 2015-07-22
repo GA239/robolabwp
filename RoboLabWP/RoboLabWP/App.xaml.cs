@@ -74,6 +74,7 @@ namespace RoboLabWP
         // Этот код не будет выполняться при повторной активации приложения
         private void Application_Launching(object sender, LaunchingEventArgs e)
         {
+            UserGameData = new MZUserGameData();
         }
 
         // Код для выполнения при активации приложения (переводится в основной режим)
