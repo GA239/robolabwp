@@ -81,18 +81,21 @@ namespace RoboLabWP
         // Этот код не будет выполняться при первом запуске приложения
         private void Application_Activated(object sender, ActivatedEventArgs e)
         {
+            UserGameData.GameSettings.LoadSettings(true);
         }
 
         // Код для выполнения при деактивации приложения (отправляется в фоновый режим)
         // Этот код не будет выполняться при закрытии приложения
         private void Application_Deactivated(object sender, DeactivatedEventArgs e)
         {
+            UserGameData.GameSettings.SaveSettings();
         }
 
         // Код для выполнения при закрытии приложения (например, при нажатии пользователем кнопки "Назад")
         // Этот код не будет выполняться при деактивации приложения
         private void Application_Closing(object sender, ClosingEventArgs e)
         {
+            UserGameData.GameSettings.SaveSettings();
         }
 
         // Код для выполнения в случае ошибки навигации

@@ -94,8 +94,6 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Languages\Controller.cs" />
-    <Compile Include="Languages\English.cs" />
-    <Compile Include="Languages\Russian.cs" />
     <Compile Include="Model\Basic Types\MZMacro.cs" />
     <Compile Include="Model\Basic Types\MZByte.cs" />
     <Compile Include="Model\Basic Types\MZMotion.cs" />
