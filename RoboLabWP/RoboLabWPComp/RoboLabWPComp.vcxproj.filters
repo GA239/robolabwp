@@ -21,6 +21,21 @@
     <ClCompile Include="Model\Game\MZVisitsMatrix.cpp">
       <Filter>Model\Game</Filter>
     </ClCompile>
+    <ClCompile Include="Model\Game\Game Objects\MZButton.cpp">
+      <Filter>Model\Game\Game Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\Game\Game Objects\MZExit.cpp">
+      <Filter>Model\Game\Game Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\Game\Game Objects\MZFlow.cpp">
+      <Filter>Model\Game\Game Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\Game\Game Objects\MZOneWayWall.cpp">
+      <Filter>Model\Game\Game Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\Game\Game Objects\MZRotatingCell.cpp">
+      <Filter>Model\Game\Game Objects</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AngleBase.h" />
@@ -63,6 +78,24 @@
     <ClInclude Include="Model\Game\MZVisitsMatrix.h">
       <Filter>Model\Game</Filter>
     </ClInclude>
+    <ClInclude Include="Model\Game\Game Objects\MZButton.h">
+      <Filter>Model\Game\Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\Game\Game Objects\MZTarget.h">
+      <Filter>Model\Game\Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\Game\Game Objects\MZExit.h">
+      <Filter>Model\Game\Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\Game\Game Objects\MZFlow.h">
+      <Filter>Model\Game\Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\Game\Game Objects\MZOneWayWall.h">
+      <Filter>Model\Game\Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\Game\Game Objects\MZRotatingCell.h">
+      <Filter>Model\Game\Game Objects</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Model">
@@ -73,6 +106,9 @@
     </Filter>
     <Filter Include="Model\Game">
       <UniqueIdentifier>{e1edef80-0c2a-4ea4-b2f8-5fd32031326e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Model\Game\Game Objects">
+      <UniqueIdentifier>{77732c3c-d0e2-47a2-a17d-defc4c93e309}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

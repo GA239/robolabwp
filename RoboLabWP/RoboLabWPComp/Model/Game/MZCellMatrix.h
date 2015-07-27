@@ -20,6 +20,7 @@ class MZCellMatrix
 {
 public:
 	MZCellMatrix(int width, int height);
+	MZCellMatrix(MZCellMatrix &obj);
 	virtual ~MZCellMatrix(void);
 
 	MZCell* cellAtPosition(MZPosition * position);

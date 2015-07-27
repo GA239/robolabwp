@@ -23,7 +23,7 @@ public:
 	void setLastVisitAtStepAtPosition(int step, MZPosition *position);
 
 private:
-	vector<vector<int>> _visits;;
+	vector<vector<int>> _visits;
     int _width, _height;
 
 

@@ -11,13 +11,14 @@ class MZMotion
 {
 public:
 	MZMotion(double speed, MZDirection direction);
+	MZMotion(MZMotion &obj);
 	~MZMotion(void);
-
-	double _speed;
-	MZDirection _direction;
 
 	void  use(void);
 	int timesUsed();
+
+	double _speed;
+	MZDirection _direction;
 
 private:
 	int _timesUsed;

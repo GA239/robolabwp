@@ -9,6 +9,12 @@ MZMotion::MZMotion(double speed, MZDirection direction)
     _timesUsed = 0;
 }
 
+MZMotion::MZMotion(MZMotion &obj)
+{
+	_speed = obj._speed;
+	_direction =obj._direction;
+	_timesUsed = obj.timesUsed();
+}
 
 MZMotion::~MZMotion(void)
 {

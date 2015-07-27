@@ -151,6 +151,12 @@
     <ClInclude Include="Model\Basic Types\MZPosition.h" />
     <ClInclude Include="Model\Basic Types\MZRotationDirection.h" />
     <ClInclude Include="Model\Basic Types\MZVertexData.h" />
+    <ClInclude Include="Model\Game\Game Objects\MZButton.h" />
+    <ClInclude Include="Model\Game\Game Objects\MZExit.h" />
+    <ClInclude Include="Model\Game\Game Objects\MZFlow.h" />
+    <ClInclude Include="Model\Game\Game Objects\MZOneWayWall.h" />
+    <ClInclude Include="Model\Game\Game Objects\MZRotatingCell.h" />
+    <ClInclude Include="Model\Game\Game Objects\MZTarget.h" />
     <ClInclude Include="Model\Game\MZCell.h" />
     <ClInclude Include="Model\Game\MZCellMatrix.h" />
     <ClInclude Include="Model\Game\MZVisitsMatrix.h" />
@@ -163,6 +169,11 @@
     <ClCompile Include="Direct3DContentProvider.cpp" />
     <ClCompile Include="Model\Basic Types\MZMotion.cpp" />
     <ClCompile Include="Model\Basic Types\MZPosition.cpp" />
+    <ClCompile Include="Model\Game\Game Objects\MZButton.cpp" />
+    <ClCompile Include="Model\Game\Game Objects\MZExit.cpp" />
+    <ClCompile Include="Model\Game\Game Objects\MZFlow.cpp" />
+    <ClCompile Include="Model\Game\Game Objects\MZOneWayWall.cpp" />
+    <ClCompile Include="Model\Game\Game Objects\MZRotatingCell.cpp" />
     <ClCompile Include="Model\Game\MZCell.cpp" />
     <ClCompile Include="Model\Game\MZCellMatrix.cpp" />
     <ClCompile Include="Model\Game\MZVisitsMatrix.cpp" />
