@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="AngleBase.cpp" />
+    <ClCompile Include="CubeRenderer.cpp" />
+    <ClCompile Include="Direct3DInterop.cpp" />
+    <ClCompile Include="Direct3DContentProvider.cpp" />
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="Model\Basic Types\MZMotion.cpp">
+      <Filter>Model\Basic Types</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\Basic Types\MZPosition.cpp">
+      <Filter>Model\Basic Types</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\Game\MZCell.cpp">
+      <Filter>Model\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\Game\MZCellMatrix.cpp">
+      <Filter>Model\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\Game\MZVisitsMatrix.cpp">
+      <Filter>Model\Game</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AngleBase.h" />
+    <ClInclude Include="BasicTimer.h" />
+    <ClInclude Include="CubeRenderer.h" />
+    <ClInclude Include="Direct3DInterop.h" />
+    <ClInclude Include="DirectXHelper.h" />
+    <ClInclude Include="Direct3DContentProvider.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="Model\Basic Types\MZDirection.h">
+      <Filter>Model\Basic Types</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\Basic Types\MZByte.h">
+      <Filter>Model\Basic Types</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\Basic Types\MZMacro.h">
+      <Filter>Model\Basic Types</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\Basic Types\MZMoveResultCode.h">
+      <Filter>Model\Basic Types</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\Basic Types\MZVertexData.h">
+      <Filter>Model\Basic Types</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\Basic Types\MZMotion.h">
+      <Filter>Model\Basic Types</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\Basic Types\MZPosition.h">
+      <Filter>Model\Basic Types</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\Basic Types\MZRotationDirection.h">
+      <Filter>Model\Basic Types</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\Game\MZCell.h">
+      <Filter>Model\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\Game\MZCellMatrix.h">
+      <Filter>Model\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\Game\MZVisitsMatrix.h">
+      <Filter>Model\Game</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Model">
+      <UniqueIdentifier>{277d7d52-9da6-4855-8261-c99a5d6b903d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Model\Basic Types">
+      <UniqueIdentifier>{191d5d11-b6c4-4dd2-9153-b4f62d0c1b00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Model\Game">
+      <UniqueIdentifier>{e1edef80-0c2a-4ea4-b2f8-5fd32031326e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
