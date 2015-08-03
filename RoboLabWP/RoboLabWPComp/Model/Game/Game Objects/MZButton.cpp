@@ -4,7 +4,7 @@
 
 MZButton::MZButton(MZPosition * position, MZDirection direction, MZTarget* target)
 {
-	_position = position;
+	_position = new MZPosition(*position);
     _direction = direction;
     _target = target;
 	_isActivated = false;
@@ -13,6 +13,11 @@ MZButton::MZButton(MZPosition * position, MZDirection direction, MZTarget* targe
 
 MZButton::~MZButton(void)
 {
+	if(_position != NULL)
+	{
+		delete(_position);
+		_position = NULL;
+	}
 }
 
 

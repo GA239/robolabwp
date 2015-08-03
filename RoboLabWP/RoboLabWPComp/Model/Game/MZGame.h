@@ -1,0 +1,61 @@
+#pragma once
+
+//#import <UIKit/UIKit.h>
+//#import <GameKit/GameKit.h>
+#include "MZMaze.h"
+#include "MZVisitsMatrix.h"
+#include "Model\Basic Types\MZPosition.h";
+#include "Model\Basic Types\MZMotion.h";
+#include "Model\Basic Types\MZMoveResultCode.h";
+
+class MZGame
+{
+	static MZGame* currentGame;
+	static int _refcount;
+public:
+
+	static MZGame* start()
+    {
+		currentGame = new MZGame();
+		_refcount = 1;
+        return currentGame;
+    }
+	static MZGame* getInstance()
+    {
+		if(!currentGame)
+		{
+			_refcount++;
+			currentGame = new MZGame();
+		}
+		return currentGame;
+    }
+	void FreeInst() { _refcount--; if(!_refcount) {delete this; currentGame = NULL;}}
+
+	int stepsCount();
+	int minimalSteps();
+
+	MZMoveResultCode makeStepTo(MZDirection direction);
+	void pause();
+	void resume();
+	bool isPaused();
+	bool isEnded();
+	MZMotion* updateWithFrame( int frame);
+	void visitPosition(MZPosition* position);
+
+	MZMaze* _maze;
+	MZPosition* _currentPosition;
+	MZVisitsMatrix* _visitsMatrix;
+
+private:
+	MZGame(void);
+	MZGame(const MZGame& root);
+    MZGame& operator=(const MZGame&);
+	virtual ~MZGame(void);
+
+	int _stepsCount;
+    int _minimalSteps;
+    bool _isPaused;
+    bool _isEnded;
+
+};
+

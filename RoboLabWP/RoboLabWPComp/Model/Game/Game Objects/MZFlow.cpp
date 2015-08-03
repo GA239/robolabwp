@@ -4,13 +4,12 @@
 
 MZFlow::MZFlow(MZPosition * pos, MZDirection dir, int length, double speed)
 {
-	_position = pos;
+	_position = new MZPosition(*pos);
     _direction = dir;
     _length = length;
     _speed = speed;
 	_isInUse = false;
 }
-
 
 MZFlow::~MZFlow(void)
 {

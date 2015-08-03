@@ -8,10 +8,11 @@
 
 typedef enum
 {
-    MOTION_IMPOSSIBLE,
-    MOTION_PERFORMED,
-    GAME_ENDED,
-    GAME_PAUSED
+    MOTION_IMPOSSIBLE = 1,
+    MOTION_PERFORMED = 2,
+    GAME_ENDED = 4,
+    GAME_PAUSED = 8,
+	NEEDS_UPDATE = 16
 } MZMoveResultCode;
 
 #endif

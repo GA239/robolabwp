@@ -47,10 +47,10 @@ void MZPosition::move(MZDirection direction)
     }
 }
 
-MZPosition MZPosition::copyWithZone(void)
+MZPosition* MZPosition::copy(void)
 {
 	MZPosition* copy = new MZPosition(x(),y());
-	return *copy;
+	return copy;
 }
 
 bool MZPosition::equals(MZPosition *otherPosition)

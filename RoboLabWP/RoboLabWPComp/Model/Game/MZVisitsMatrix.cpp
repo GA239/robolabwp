@@ -32,14 +32,21 @@ int MZVisitsMatrix::lastVisitAtPosition(MZPosition* position)
     return -LAST_STEPS_VISIBLE;
 
 }
+
+double MAX(double a, double b)
+{
+	if(a >= b)
+	{
+		return a;
+	}
+	return b;
+}
 double MZVisitsMatrix::visibilityAtXY(int x, int y)
 {
 	if((x >= 0) && (y >=0) && (x < _width) && (y < _height))
     {
         int lastVisit = _visits[x][y];
-		/*
-        return MAX((1.0 - (double)([[MZGame getInstance] stepsCount] - lastVisit)/(double)LAST_STEPS_VISIBLE),0.0);
-		*/
+		return MAX((1.0 - (double)(MZGame::getInstance()->stepsCount() - lastVisit)/(double)LAST_STEPS_VISIBLE),0.0);
     }
     return -LAST_STEPS_VISIBLE;
 }

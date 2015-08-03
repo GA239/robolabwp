@@ -4,7 +4,7 @@
 
 MZRotatingCell::MZRotatingCell(MZPosition* position, MZCell* cell, MZRotationDirection rotationDirection)
 {
-	_position = position;
+	_position = new MZPosition(*position);
     _cell = cell;
     _rotationDirection = rotationDirection;
 }
@@ -15,6 +15,11 @@ MZRotatingCell::~MZRotatingCell(void)
 	if(_cell != NULL)
 	{
 		delete(_cell);
+	}
+	if(_position != NULL)
+	{
+		delete(_position);
+		_position = NULL;
 	}
 }
 

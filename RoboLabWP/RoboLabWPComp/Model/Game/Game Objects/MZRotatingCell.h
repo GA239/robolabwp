@@ -9,7 +9,7 @@
 #include "Model\Basic Types\MZByte.h";
 #include "Model\Basic Types\MZRotationDirection.h";
 #include "Model\Game\MZCell.h";
-#include "Model\Game\Game Objects\MZTarget.h";
+#include "MZTarget.h";
 
 class MZRotatingCell :
 	public MZTarget
@@ -22,6 +22,7 @@ public:
 	bool hasWallAtDirection(MZDirection direction);
 	MZRotationDirection rotationDirection();
 	void toggle();
+	MZGameObjectName info() {return ROTATINGCELL;}
 
 private:
 	MZPosition * _position;

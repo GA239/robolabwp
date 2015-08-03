@@ -6,7 +6,7 @@
 //
 
 #include "Model\Basic Types\MZPosition.h";
-#include "Model\Game\Game Objects\MZTarget.h";
+#include "MZTarget.h";
 
 
 class MZOneWayWall :
@@ -20,6 +20,7 @@ public:
 	MZPosition* position();
 	MZDirection direction();
 	void toggle();
+	MZGameObjectName info() {return ONEWAYWALL;}
 
 private:
 

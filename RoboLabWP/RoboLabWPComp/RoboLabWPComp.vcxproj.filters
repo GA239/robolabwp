@@ -36,6 +36,12 @@
     <ClCompile Include="Model\Game\Game Objects\MZRotatingCell.cpp">
       <Filter>Model\Game\Game Objects</Filter>
     </ClCompile>
+    <ClCompile Include="Model\Game\MZMaze.cpp">
+      <Filter>Model\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\Game\MZGame.cpp">
+      <Filter>Model\Game</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AngleBase.h" />
@@ -78,10 +84,13 @@
     <ClInclude Include="Model\Game\MZVisitsMatrix.h">
       <Filter>Model\Game</Filter>
     </ClInclude>
-    <ClInclude Include="Model\Game\Game Objects\MZButton.h">
+    <ClInclude Include="Model\Game\Game Objects\MZGameObject.h">
       <Filter>Model\Game\Game Objects</Filter>
     </ClInclude>
     <ClInclude Include="Model\Game\Game Objects\MZTarget.h">
+      <Filter>Model\Game\Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\Game\Game Objects\MZButton.h">
       <Filter>Model\Game\Game Objects</Filter>
     </ClInclude>
     <ClInclude Include="Model\Game\Game Objects\MZExit.h">
@@ -96,6 +105,15 @@
     <ClInclude Include="Model\Game\Game Objects\MZRotatingCell.h">
       <Filter>Model\Game\Game Objects</Filter>
     </ClInclude>
+    <ClInclude Include="Model\Game\MZMaze.h">
+      <Filter>Model\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\Basic Types\MZGameObjectsNames.h">
+      <Filter>Model\Basic Types</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\Game\MZGame.h">
+      <Filter>Model\Game</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Model">
@@ -108,7 +126,7 @@
       <UniqueIdentifier>{e1edef80-0c2a-4ea4-b2f8-5fd32031326e}</UniqueIdentifier>
     </Filter>
     <Filter Include="Model\Game\Game Objects">
-      <UniqueIdentifier>{77732c3c-d0e2-47a2-a17d-defc4c93e309}</UniqueIdentifier>
+      <UniqueIdentifier>{cbc74d44-19c0-4200-8d15-5afa43293316}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

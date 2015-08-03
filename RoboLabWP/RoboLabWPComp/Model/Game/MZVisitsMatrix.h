@@ -8,6 +8,7 @@
 
 #include "Model\Basic Types\MZPosition.h";
 #include "Model\Basic Types\MZMacro.h"
+#include "MZGame.h";
 #include <vector>;
 
 using namespace std;

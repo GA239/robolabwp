@@ -4,12 +4,17 @@
 
 MZExit::MZExit(MZPosition * position)
 {
-	_position = position;
+	_position = new MZPosition(*position);
 }
 
 
 MZExit::~MZExit(void)
 {
+	if(_position != NULL)
+	{
+		delete(_position);
+		_position = NULL;
+	}
 }
 
 

@@ -13,7 +13,7 @@ public:
 	int x(void);
 	int y(void);
 	void move(MZDirection direction);
-	MZPosition copyWithZone(void);
+	MZPosition* copy(void);
 	bool equals(MZPosition *otherPosition);
 
 private:

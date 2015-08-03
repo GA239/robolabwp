@@ -27,6 +27,8 @@ public:
 	bool isInFlow(MZPosition *position);
 	double shift();
 	void toggle();
+	MZGameObjectName info() {return FLOW;}
+
 private:
 
 	MZDirection _direction;
