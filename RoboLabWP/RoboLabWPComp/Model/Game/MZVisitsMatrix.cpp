@@ -46,8 +46,11 @@ double MZVisitsMatrix::visibilityAtXY(int x, int y)
 	if((x >= 0) && (y >=0) && (x < _width) && (y < _height))
     {
         int lastVisit = _visits[x][y];
-		return MAX((1.0 - (double)(MZGame::getInstance()->stepsCount() - lastVisit)/(double)LAST_STEPS_VISIBLE),0.0);
-    }
+		MZGame* game = MZGame::getInstance();
+		double res = MAX((1.0 - (double)(game->stepsCount() - lastVisit)/(double)LAST_STEPS_VISIBLE),0.0);
+		game->FreeInst();
+		return res;
+	}
     return -LAST_STEPS_VISIBLE;
 }
 void MZVisitsMatrix::setLastVisitAtStepAtPosition(int step, MZPosition *position)

@@ -42,6 +42,10 @@
     <ClCompile Include="Model\Game\MZGame.cpp">
       <Filter>Model\Game</Filter>
     </ClCompile>
+    <ClCompile Include="View\Graphics\AnimationSystem\MZAlphaMap.cpp">
+      <Filter>View\Graphics\AnimationSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="MZAnimationSystem.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AngleBase.h" />
@@ -114,6 +118,13 @@
     <ClInclude Include="Model\Game\MZGame.h">
       <Filter>Model\Game</Filter>
     </ClInclude>
+    <ClInclude Include="View\Graphics\AnimationSystem\MZCellCorners.h">
+      <Filter>View\Graphics\AnimationSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="View\Graphics\AnimationSystem\MZAlphaMap.h">
+      <Filter>View\Graphics\AnimationSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="MZAnimationSystem.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Model">
@@ -127,6 +138,15 @@
     </Filter>
     <Filter Include="Model\Game\Game Objects">
       <UniqueIdentifier>{cbc74d44-19c0-4200-8d15-5afa43293316}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="View">
+      <UniqueIdentifier>{fc46082b-e558-49e2-b1df-c04b84084c3d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="View\Graphics">
+      <UniqueIdentifier>{58f1aa7e-e698-480b-ba60-9bf2f78da7bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="View\Graphics\AnimationSystem">
+      <UniqueIdentifier>{e330f782-e55c-4f6a-8af1-32b71183c3bb}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
