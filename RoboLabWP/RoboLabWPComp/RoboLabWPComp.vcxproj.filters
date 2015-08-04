@@ -45,7 +45,12 @@
     <ClCompile Include="View\Graphics\AnimationSystem\MZAlphaMap.cpp">
       <Filter>View\Graphics\AnimationSystem</Filter>
     </ClCompile>
-    <ClCompile Include="MZAnimationSystem.cpp" />
+    <ClCompile Include="View\Graphics\AnimationSystem\MZAnimationSystem.cpp">
+      <Filter>View\Graphics\AnimationSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="View\Matrix system\MZMatrixSystem.cpp">
+      <Filter>View\Graphics\Matrix system</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AngleBase.h" />
@@ -124,7 +129,12 @@
     <ClInclude Include="View\Graphics\AnimationSystem\MZAlphaMap.h">
       <Filter>View\Graphics\AnimationSystem</Filter>
     </ClInclude>
-    <ClInclude Include="MZAnimationSystem.h" />
+    <ClInclude Include="View\Graphics\AnimationSystem\MZAnimationSystem.h">
+      <Filter>View\Graphics\AnimationSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="View\Matrix system\MZMatrixSystem.h">
+      <Filter>View\Graphics\Matrix system</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Model">
@@ -147,6 +157,9 @@
     </Filter>
     <Filter Include="View\Graphics\AnimationSystem">
       <UniqueIdentifier>{e330f782-e55c-4f6a-8af1-32b71183c3bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="View\Graphics\Matrix system">
+      <UniqueIdentifier>{0b6b603a-4a59-42b7-8ca7-33dcf86beb3d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

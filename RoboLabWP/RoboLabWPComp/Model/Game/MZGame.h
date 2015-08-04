@@ -17,16 +17,16 @@ public:
 	static MZGame* start()
     {
 		currentGame = new MZGame();
-		_refcount = 1;
+		_refcount = 0;
         return currentGame;
     }
 	static MZGame* getInstance()
     {
 		if(!currentGame)
 		{
-			_refcount++;
-			currentGame = new MZGame();
+			start();
 		}
+		_refcount++;
 		return currentGame;
     }
 	void FreeInst() { _refcount--; if(!_refcount) {delete this; currentGame = NULL;}}

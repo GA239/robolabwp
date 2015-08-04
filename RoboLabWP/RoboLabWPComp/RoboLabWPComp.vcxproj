@@ -164,10 +164,11 @@
     <ClInclude Include="Model\Game\MZGame.h" />
     <ClInclude Include="Model\Game\MZMaze.h" />
     <ClInclude Include="Model\Game\MZVisitsMatrix.h" />
-    <ClInclude Include="MZAnimationSystem.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="View\Graphics\AnimationSystem\MZAlphaMap.h" />
+    <ClInclude Include="View\Graphics\AnimationSystem\MZAnimationSystem.h" />
     <ClInclude Include="View\Graphics\AnimationSystem\MZCellCorners.h" />
+    <ClInclude Include="View\Matrix system\MZMatrixSystem.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AngleBase.cpp" />
@@ -186,11 +187,12 @@
     <ClCompile Include="Model\Game\MZGame.cpp" />
     <ClCompile Include="Model\Game\MZMaze.cpp" />
     <ClCompile Include="Model\Game\MZVisitsMatrix.cpp" />
-    <ClCompile Include="MZAnimationSystem.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="View\Graphics\AnimationSystem\MZAlphaMap.cpp" />
+    <ClCompile Include="View\Graphics\AnimationSystem\MZAnimationSystem.cpp" />
+    <ClCompile Include="View\Matrix system\MZMatrixSystem.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\..\..\Downloads\angleproject-dev\samples\gles2_book\Common\esUtil_phone.vcxproj">
