@@ -151,7 +151,6 @@
     <ClInclude Include="Model\Basic Types\MZMoveResultCode.h" />
     <ClInclude Include="Model\Basic Types\MZPosition.h" />
     <ClInclude Include="Model\Basic Types\MZRotationDirection.h" />
-    <ClInclude Include="Model\Basic Types\MZVertexData.h" />
     <ClInclude Include="Model\Game\Game Objects\MZButton.h" />
     <ClInclude Include="Model\Game\Game Objects\MZExit.h" />
     <ClInclude Include="Model\Game\Game Objects\MZFlow.h" />

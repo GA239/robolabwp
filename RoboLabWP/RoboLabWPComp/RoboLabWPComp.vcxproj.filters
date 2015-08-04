@@ -72,9 +72,6 @@
     <ClInclude Include="Model\Basic Types\MZMoveResultCode.h">
       <Filter>Model\Basic Types</Filter>
     </ClInclude>
-    <ClInclude Include="Model\Basic Types\MZVertexData.h">
-      <Filter>Model\Basic Types</Filter>
-    </ClInclude>
     <ClInclude Include="Model\Basic Types\MZMotion.h">
       <Filter>Model\Basic Types</Filter>
     </ClInclude>
