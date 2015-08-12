@@ -1,5 +1,7 @@
 #include "pch.h"
 #include "MZAlphaMap.h"
+#include "Model\Game\MZGame.h"
+
 #include <math.h>
 
 MZAlphaMap::MZAlphaMap(void)
@@ -58,7 +60,7 @@ void MZAlphaMap::setReal()
         {
             double topLeft = -1.0, bottomLeft = -1.0, topRight = -1.0, bottomRight = -1.0, top = -1.0, left = -1.0, right = -1.0, bottom = -1.0, center = -1.0;
             
-            double topLeftCorner, topRightCorner,bottomLeftCorner, bottomRightCorner;
+            float topLeftCorner, topRightCorner,bottomLeftCorner, bottomRightCorner;
             
 			center = visitsMatrix->visibilityAtXY(x,y);
              
@@ -121,7 +123,7 @@ void MZAlphaMap::setReal()
             if(left == -1.0)
                 countOfAffectingValues--;
             
-            topLeftCorner = (center + topLeft + top + left + 4 - countOfAffectingValues)/countOfAffectingValues;
+            topLeftCorner = (float)(center + topLeft + top + left + 4 - countOfAffectingValues)/countOfAffectingValues;
             //topLeftCorner = MAX(MAX(center, topLeft),MAX(top,left));
             _map[x][y][TOP_LEFT]  = topLeftCorner;
             
@@ -155,7 +157,7 @@ void MZAlphaMap::setReal()
             if(right == -1.0)
                 countOfAffectingValues--;
             
-            topRightCorner = (center + topRight + top + right + 4 - countOfAffectingValues)/countOfAffectingValues;
+            topRightCorner = (float)(center + topRight + top + right + 4 - countOfAffectingValues)/countOfAffectingValues;
             //topRightCorner = MAX(MAX(center, topRight),MAX(top,right));
             _map[x][y][TOP_RIGHT] = topRightCorner;
             
@@ -187,7 +189,7 @@ void MZAlphaMap::setReal()
             if(right == -1.0)
                 countOfAffectingValues--;
             
-            bottomRightCorner = (center + bottomRight + bottom + right + 4 - countOfAffectingValues)/countOfAffectingValues;
+            bottomRightCorner = (float)(center + bottomRight + bottom + right + 4 - countOfAffectingValues)/countOfAffectingValues;
             //bottomRightCorner = MAX(MAX(center, bottomRight),MAX(bottom,right));
             _map[x][y][BOTTOM_RIGHT] = bottomRightCorner;
             
@@ -224,7 +226,7 @@ void MZAlphaMap::setReal()
             if(left == -1.0)
                 countOfAffectingValues--;
             
-            bottomLeftCorner = (center + bottomLeft + bottom + left + 4 - countOfAffectingValues)/countOfAffectingValues;
+            bottomLeftCorner = (float)(center + bottomLeft + bottom + left + 4 - countOfAffectingValues)/countOfAffectingValues;
             //bottomLeftCorner = MAX(MAX(center, bottomLeft),MAX(bottom,left));
             _map[x][y][BOTTOM_LEFT]  = bottomLeftCorner;
         }
@@ -245,9 +247,9 @@ void MZAlphaMap::updateToMap(MZAlphaMap* realMap)
                 else
                 {
                     if(_map[i][j][k] > realMap->valueAtXYinCorner(i, j,(MZCellCorners)k))
-                        _map[i][j][k] -= ALPHA_SPEED;
+                        _map[i][j][k] -= (float)ALPHA_SPEED;
                     else
-                        _map[i][j][k] += ALPHA_SPEED;
+                        _map[i][j][k] += (float)ALPHA_SPEED;
                 }
             }
         }

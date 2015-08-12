@@ -114,6 +114,7 @@ bool MZFlow::isInFlow(MZPosition *position)
             }
         break;
     }
+	return false;
 }
 double MZFlow::shift()
 {

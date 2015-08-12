@@ -4,8 +4,8 @@
 //
 //  Класс, объект которого хранит данные о клетке лабиринта. Не изменяется после построения лабиринта.
 
-#include "Model\Basic Types\MZByte.h";
-#include "Model\Basic Types\MZDirection.h";
+#include "Model\Basic Types\MZByte.h"
+#include "Model\Basic Types\MZDirection.h"
 
 class MZCell
 {

@@ -18,10 +18,10 @@ MZCellMatrix::MZCellMatrix(int width, int height)
 MZCellMatrix::MZCellMatrix(MZCellMatrix &obj)
 {
 	_cells.resize(obj._cells.size());
-    for(int i = 0; i < obj._cells.size(); i++)
+	for(unsigned int i = 0; i < obj._cells.size(); i++)
     {
 		_cells[i].resize(obj._cells[i].size());
-        for(int j = 0; j < obj._cells[i].size(); j++)
+        for(unsigned int j = 0; j < obj._cells[i].size(); j++)
         {
 			_cells[i][j] = new MZCell(obj._cells[i][j]->wallsValue());
         }
@@ -30,7 +30,8 @@ MZCellMatrix::MZCellMatrix(MZCellMatrix &obj)
 
 MZCellMatrix::~MZCellMatrix(void)
 {
-	int width = _cells.size(), int height = _cells[0].size();
+	int width = _cells.size();
+	int height = _cells[0].size();
 	for(int i = 0; i < width; i++)
     {
         for(int j = 0; j < height; j++)
@@ -42,7 +43,9 @@ MZCellMatrix::~MZCellMatrix(void)
 
 MZCell* MZCellMatrix::cellAtPosition(MZPosition * position)
 {
-	if((position->x() >= 0) && (position->y() >=0) && (position->x() < _cells.size()) && (position->y() < _cells[position->x()].size()))
+	int cellsize = (int)_cells.size();
+	int cellisize = (int)_cells[position->x()].size();
+	if((position->x() >= 0) && (position->y() >=0) && (position->x() < cellsize) && (position->y() < cellisize))
     {
         return _cells[position->x()][position->y()];
     }

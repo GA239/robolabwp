@@ -1,6 +1,8 @@
 #include "pch.h"
 #include "MZGame.h"
 
+MZGame* MZGame::currentGame;
+int MZGame::_refcount;
 
 MZGame::MZGame(void)
 {
@@ -131,7 +133,7 @@ MZMoveResultCode MZGame::makeStepTo(MZDirection direction)
         _stepsCount++;
         _currentPosition->move(direction);
 	    visitPosition(_currentPosition);
-        MZPosition *exitPosition;
+        MZPosition *exitPosition = NULL;
 		for (unsigned int i = 0; i < _objectList.size(); i++)
 		{
 			if (_objectList[i] != NULL)

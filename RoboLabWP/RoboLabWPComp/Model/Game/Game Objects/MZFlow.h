@@ -6,10 +6,10 @@
 //
 //
 
-#include "Model\Basic Types\MZPosition.h";
-#include "Model\Basic Types\MZDirection.h";
-#include "Model\Basic Types\MZMotion.h";
-#include "Model\Game\Game Objects\MZTarget.h";
+#include "Model\Basic Types\MZPosition.h"
+#include "Model\Basic Types\MZDirection.h"
+#include "Model\Basic Types\MZMotion.h"
+#include "Model\Game\Game Objects\MZTarget.h"
 
 class MZFlow :
 	public MZTarget

@@ -1,7 +1,7 @@
 #pragma once
-#include "MZGameObject.h";
 
-#include "Model\Basic Types\MZPosition.h";
+#include "MZGameObject.h"
+#include "Model\Basic Types\MZPosition.h"
 #include "MZTarget.h"
 
 class MZButton :

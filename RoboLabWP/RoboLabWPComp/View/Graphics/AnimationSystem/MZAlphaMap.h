@@ -4,8 +4,7 @@
 //  Robo Lab
 //
 
-#include "MZCellCorners.h";
-#include "Model\Game\MZGame.h"
+#include "MZCellCorners.h"
 #include "Model\Basic Types\MZMacro.h"
 
 class MZAlphaMap

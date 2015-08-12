@@ -1,9 +1,11 @@
 #include "pch.h"
 #include "MZVisitsMatrix.h"
+#include "MZGame.h"
 
 
 MZVisitsMatrix::MZVisitsMatrix(int width, int height)
 {
+	
 	_width = width;
 	_height = height;
 	_visits.resize(width);
@@ -22,7 +24,6 @@ MZVisitsMatrix::~MZVisitsMatrix(void)
 {
 }
 
-
 int MZVisitsMatrix::lastVisitAtPosition(MZPosition* position)
 {
 	if((position->x() >= 0 ) && (position->y() >=0) && (position->x() < _width) && (position->y() < _height))
@@ -30,7 +31,6 @@ int MZVisitsMatrix::lastVisitAtPosition(MZPosition* position)
         return _visits[position->x()][position->y()];
     }
     return -LAST_STEPS_VISIBLE;
-
 }
 
 double MAX(double a, double b)

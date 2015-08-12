@@ -4,9 +4,9 @@
 //#import <GameKit/GameKit.h>
 #include "MZMaze.h"
 #include "MZVisitsMatrix.h"
-#include "Model\Basic Types\MZPosition.h";
-#include "Model\Basic Types\MZMotion.h";
-#include "Model\Basic Types\MZMoveResultCode.h";
+#include "Model\Basic Types\MZPosition.h"
+#include "Model\Basic Types\MZMotion.h"
+#include "Model\Basic Types\MZMoveResultCode.h"
 
 class MZGame
 {
@@ -43,8 +43,8 @@ public:
 	void visitPosition(MZPosition* position);
 
 	MZMaze* _maze;
-	MZPosition* _currentPosition;
 	MZVisitsMatrix* _visitsMatrix;
+	MZPosition* _currentPosition;
 
 private:
 	MZGame(void);

@@ -41,7 +41,7 @@ void MZRotatingCell::toggle()
     if(_rotationDirection == CLOCKWISE)
     {
 		bool isDown = _cell->hasWallAtDirection(DOWN);
-        MZByte walls = _cell->wallsValue;
+		MZByte walls = _cell->wallsValue(); 
         walls = walls << 1;
         if(isDown)
         {
@@ -54,7 +54,7 @@ void MZRotatingCell::toggle()
     else
     {
 		BOOL isLeft = _cell->hasWallAtDirection(LEFT);
-        MZByte walls = _cell->wallsValue;
+        MZByte walls = _cell->wallsValue();
         walls = walls >> 1;
         if(isLeft)
             walls = walls & (1 << DOWN);

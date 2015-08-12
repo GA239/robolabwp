@@ -55,7 +55,7 @@ MZPosition* MZPosition::copy(void)
 
 bool MZPosition::equals(MZPosition *otherPosition)
 {
-	if((_x == otherPosition->x()) && (_y == otherPosition->y))
+	if((_x == otherPosition->x()) && (_y == otherPosition->y()))
         return true;
     return false;
 }

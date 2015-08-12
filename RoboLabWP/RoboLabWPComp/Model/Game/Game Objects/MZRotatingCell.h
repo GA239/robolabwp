@@ -4,12 +4,12 @@
 //  MZRotatingCell.h
 //  Robo Lab
 //
-#include "Model\Basic Types\MZPosition.h";
-#include "Model\Basic Types\MZDirection.h";
-#include "Model\Basic Types\MZByte.h";
-#include "Model\Basic Types\MZRotationDirection.h";
-#include "Model\Game\MZCell.h";
-#include "MZTarget.h";
+#include "Model\Basic Types\MZPosition.h"
+#include "Model\Basic Types\MZDirection.h"
+#include "Model\Basic Types\MZByte.h"
+#include "Model\Basic Types\MZRotationDirection.h"
+#include "Model\Game\MZCell.h"
+#include "MZTarget.h"
 
 class MZRotatingCell :
 	public MZTarget

@@ -6,8 +6,8 @@
 //
 #include "Model\Basic Types\MZMacro.h"
 //#include "MZShaderSystem.h"
-#include <vector>;
-#include "glm\glm.hpp";
+#include <vector>
+#include "glm\glm.hpp"
 
 using namespace glm;
 using namespace std;

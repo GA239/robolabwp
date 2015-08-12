@@ -1,6 +1,9 @@
 #include "pch.h"
 #include "MZMatrixSystem.h"
-#include "glm\gtc\matrix_transform.hpp";
+#include "glm\gtc\matrix_transform.hpp"
+
+MZMatrixSystem* MZMatrixSystem::instance;
+int MZMatrixSystem::_refcount;
 
 
 MZMatrixSystem::MZMatrixSystem(void)
@@ -22,7 +25,7 @@ void MZMatrixSystem::translateWithVector3(vec3 vector)
 	//GLKMatrixStackPush(_matrixStackReference);
 	_matrixStackReference.push_back(glm::mat4(1.0f));
     //GLKMatrixStackTranslateWithVector3(_matrixStackReference, vector);
-	glm::translate(_matrixStackReference.back(),vector);
+	_matrixStackReference.back() = glm::translate(_matrixStackReference.back(),vector);
 }
 
 void MZMatrixSystem::translate(double x, double y, double z)
@@ -31,7 +34,7 @@ void MZMatrixSystem::translate(double x, double y, double z)
 	_matrixStackReference.push_back(glm::mat4(1.0f));
 	vec3 vector = vec3(x,y,z);
     //GLKMatrixStackTranslate(_matrixStackReference, x, y, z);
-	glm::translate(_matrixStackReference.back(),vector);
+	_matrixStackReference.back() = glm::translate(_matrixStackReference.back(),vector);
 }
 void MZMatrixSystem::scale(double x,  double y, double z)
 {
@@ -39,7 +42,7 @@ void MZMatrixSystem::scale(double x,  double y, double z)
 	_matrixStackReference.push_back(glm::mat4(1.0f));
     //GLKMatrixStackScale(_matrixStackReference, x, y, z);
 	vec3 vector = vec3(x,y,z);
-	glm::scale(_matrixStackReference.back(),vector);
+	_matrixStackReference.back() = glm::scale(_matrixStackReference.back(),vector);
 }
 void MZMatrixSystem::pop()
 {

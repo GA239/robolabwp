@@ -4,10 +4,10 @@
 //  Robo Lab
 //
 //
-#include "Model\Basic Types\MZPosition.h";
+#include "Model\Basic Types\MZPosition.h"
 
 
-#include "MZGameObject.h";
+#include "MZGameObject.h"
 class MZExit :
 	public MZGameObject
 {

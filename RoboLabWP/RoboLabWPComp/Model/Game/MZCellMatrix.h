@@ -10,9 +10,9 @@
 //   ласс, €вл€ющийс€ представлением двумерного массива объектов класса MZCell.
 
 
-#include "Model\Basic Types\MZPosition.h";
-#include "Model\Game\MZCell.h";
-#include <vector>;
+#include "Model\Basic Types\MZPosition.h"
+#include "Model\Game\MZCell.h"
+#include <vector>
 
 using namespace std;
 

@@ -1,5 +1,5 @@
 #pragma once
-#include "MZGameObject.h";
+#include "MZGameObject.h"
 class MZTarget :
 	public MZGameObject
 {

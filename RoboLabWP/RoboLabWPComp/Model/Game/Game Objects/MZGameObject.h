@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Model\Basic Types\MZGameObjectsNames.h";
+#include "Model\Basic Types\MZGameObjectsNames.h"
 
 class MZGameObject
 {

@@ -3,15 +3,15 @@
 //  MZAnimationSystem.h
 //  Robo Lab
 //
-#include "Model\Basic Types\MZMotion.h";
-#include "Model\Basic Types\MZMacro.h"
-#include "Model\Basic Types\MZPosition.h"
-#include "Model\Game\MZGame.h"
+#include "Model\Basic Types\MZMotion.h"
 #include "MZAlphaMap.h"
+#include "Model\Basic Types\MZPosition.h"
+
 //#include "MZShaderSystem.h"
-//#include <vector>;
-#include "glm\glm.hpp";
+#include <vector>;
+#include "glm\glm.hpp"
 using namespace glm;
+using namespace std;
 
 class MZAnimationSystem
 {
@@ -38,7 +38,7 @@ public:
 
 	
 	void update();
-	void addMotion(MZMotion * motion);
+	void addMotion(MZMotion* motion);
 	vec3 positionShift();
 
 
@@ -59,6 +59,5 @@ private:
     MZAlphaMap *_realAlphaMap;
     MZAlphaMap *_visibleAlphaMap;
     float _alphaValues[4];
-
 };
 

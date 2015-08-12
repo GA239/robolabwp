@@ -5,8 +5,8 @@
 //  Robo Lab
 //
 
-#include "Model\Basic Types\MZPosition.h";
-#include "MZTarget.h";
+#include "Model\Basic Types\MZPosition.h"
+#include "MZTarget.h"
 
 
 class MZOneWayWall :

@@ -1,5 +1,10 @@
 #include "pch.h"
 #include "MZAnimationSystem.h"
+#include "Model\Game\MZGame.h"
+
+MZAnimationSystem* MZAnimationSystem::instance;
+int MZAnimationSystem::_refcount;
+
 
 MZAnimationSystem::MZAnimationSystem(void)
 {
@@ -31,6 +36,7 @@ void applyAlpha()
 
 void MZAnimationSystem::update()
 {
+	
 	MZGame *game = MZGame::getInstance();
 	MZPosition *realPosition = game->_currentPosition;
 	game->FreeInst();
@@ -44,7 +50,7 @@ void MZAnimationSystem::update()
     if(length > MOVE_SPEED)
     {
         vec3 step = vec3(0, 0, 0);
-		for ( int i = 0; i < _motionList.size(); i++)
+		for (unsigned int i = 0; i < _motionList.size(); i++)
         {
             MZMotion * motion = _motionList[i];
 			if(motion->timesUsed() == 0)
@@ -74,11 +80,10 @@ void MZAnimationSystem::update()
 					//step = GLKVector3Add(step, GLKVector3Make([motion speed], 0, 0));
                     break;
                 case DOWN:
-					/*
-					vec3 tmp_1 = vec3(0,-motion->_speed,0);
-					vec3 tmp = step + tmp_1;
-					step = tmp;
-					*/
+					
+					//vec3 tmp_1 = vec3(0,-motion->_speed,0);
+					//vec3 tmp = step + tmp_1;
+					//step = tmp;
 					step += vec3(0,-motion->_speed,0);
                     //step = GLKVector3Add(step, GLKVector3Make(0, -[motion speed], 0));
                     break;
@@ -95,10 +100,12 @@ void MZAnimationSystem::update()
     
 	_visibleAlphaMap->updateToMap(_realAlphaMap);
 }
-void MZAnimationSystem::addMotion(MZMotion * motion)
+
+void MZAnimationSystem::addMotion(MZMotion* motion)
 {
 	_motionList.push_back(motion);
 }
+
 vec3 MZAnimationSystem::positionShift()
 {
 	//return GLKVector3Negate(_visibleVector);
@@ -117,9 +124,9 @@ void MZAnimationSystem::setCellAlphaValues(int x, int y)
     applyAlpha();
 }
 
-double MAX(double x, double y)
+float MAX(double x, double y)
 {
-	return x > y ? x : y;
+	return float(x > y ? x : y);
 }
 
 void MZAnimationSystem::setWallAlphaValues(int x, int y, MZDirection dir)
