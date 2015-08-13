@@ -42,14 +42,20 @@
     <ClCompile Include="Model\Game\MZGame.cpp">
       <Filter>Model\Game</Filter>
     </ClCompile>
-    <ClCompile Include="View\Graphics\AnimationSystem\MZAlphaMap.cpp">
-      <Filter>View\Graphics\AnimationSystem</Filter>
-    </ClCompile>
-    <ClCompile Include="View\Graphics\AnimationSystem\MZAnimationSystem.cpp">
-      <Filter>View\Graphics\AnimationSystem</Filter>
-    </ClCompile>
-    <ClCompile Include="View\Matrix system\MZMatrixSystem.cpp">
+    <ClCompile Include="View\Graphics\Matrix system\MZMatrixSystem.cpp">
       <Filter>View\Graphics\Matrix system</Filter>
+    </ClCompile>
+    <ClCompile Include="View\Graphics\Shader sistem\MZProgram.cpp">
+      <Filter>View\Graphics\Shader sistem</Filter>
+    </ClCompile>
+    <ClCompile Include="View\Graphics\Shader sistem\MZShaderSystem.cpp">
+      <Filter>View\Graphics\Shader sistem</Filter>
+    </ClCompile>
+    <ClCompile Include="View\Graphics\Animation system\MZAlphaMap.cpp">
+      <Filter>View\Graphics\Animation system</Filter>
+    </ClCompile>
+    <ClCompile Include="View\Graphics\Animation system\MZAnimationSystem.cpp">
+      <Filter>View\Graphics\Animation system</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -120,17 +126,23 @@
     <ClInclude Include="Model\Game\MZGame.h">
       <Filter>Model\Game</Filter>
     </ClInclude>
-    <ClInclude Include="View\Graphics\AnimationSystem\MZCellCorners.h">
-      <Filter>View\Graphics\AnimationSystem</Filter>
-    </ClInclude>
-    <ClInclude Include="View\Graphics\AnimationSystem\MZAlphaMap.h">
-      <Filter>View\Graphics\AnimationSystem</Filter>
-    </ClInclude>
-    <ClInclude Include="View\Graphics\AnimationSystem\MZAnimationSystem.h">
-      <Filter>View\Graphics\AnimationSystem</Filter>
-    </ClInclude>
-    <ClInclude Include="View\Matrix system\MZMatrixSystem.h">
+    <ClInclude Include="View\Graphics\Matrix system\MZMatrixSystem.h">
       <Filter>View\Graphics\Matrix system</Filter>
+    </ClInclude>
+    <ClInclude Include="View\Graphics\Shader sistem\MZProgram.h">
+      <Filter>View\Graphics\Shader sistem</Filter>
+    </ClInclude>
+    <ClInclude Include="View\Graphics\Shader sistem\MZShaderSystem.h">
+      <Filter>View\Graphics\Shader sistem</Filter>
+    </ClInclude>
+    <ClInclude Include="View\Graphics\Animation system\MZAlphaMap.h">
+      <Filter>View\Graphics\Animation system</Filter>
+    </ClInclude>
+    <ClInclude Include="View\Graphics\Animation system\MZAnimationSystem.h">
+      <Filter>View\Graphics\Animation system</Filter>
+    </ClInclude>
+    <ClInclude Include="View\Graphics\Animation system\MZCellCorners.h">
+      <Filter>View\Graphics\Animation system</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -152,11 +164,14 @@
     <Filter Include="View\Graphics">
       <UniqueIdentifier>{58f1aa7e-e698-480b-ba60-9bf2f78da7bb}</UniqueIdentifier>
     </Filter>
-    <Filter Include="View\Graphics\AnimationSystem">
-      <UniqueIdentifier>{e330f782-e55c-4f6a-8af1-32b71183c3bb}</UniqueIdentifier>
-    </Filter>
     <Filter Include="View\Graphics\Matrix system">
       <UniqueIdentifier>{0b6b603a-4a59-42b7-8ca7-33dcf86beb3d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="View\Graphics\Shader sistem">
+      <UniqueIdentifier>{2ebc8171-011d-4cf0-abba-20c90944bb51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="View\Graphics\Animation system">
+      <UniqueIdentifier>{e330f782-e55c-4f6a-8af1-32b71183c3bb}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
