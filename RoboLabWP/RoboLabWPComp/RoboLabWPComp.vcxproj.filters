@@ -57,6 +57,18 @@
     <ClCompile Include="View\Graphics\Animation system\MZAnimationSystem.cpp">
       <Filter>View\Graphics\Animation system</Filter>
     </ClCompile>
+    <ClCompile Include="View\Graphics\Vertex system\MZGeometry.cpp">
+      <Filter>View\Graphics\Vertex system</Filter>
+    </ClCompile>
+    <ClCompile Include="View\Graphics\Vertex system\MZVertexArrayObject.cpp">
+      <Filter>View\Graphics\Vertex system</Filter>
+    </ClCompile>
+    <ClCompile Include="View\Graphics\Vertex system\MZVertexBuffer.cpp">
+      <Filter>View\Graphics\Vertex system</Filter>
+    </ClCompile>
+    <ClCompile Include="View\Graphics\Vertex system\MZVertexSystem.cpp">
+      <Filter>View\Graphics\Vertex system</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AngleBase.h" />
@@ -144,6 +156,21 @@
     <ClInclude Include="View\Graphics\Animation system\MZCellCorners.h">
       <Filter>View\Graphics\Animation system</Filter>
     </ClInclude>
+    <ClInclude Include="View\Graphics\Vertex system\MZGeometry.h">
+      <Filter>View\Graphics\Vertex system</Filter>
+    </ClInclude>
+    <ClInclude Include="View\Graphics\Vertex system\MZVertexArrayObject.h">
+      <Filter>View\Graphics\Vertex system</Filter>
+    </ClInclude>
+    <ClInclude Include="View\Graphics\Vertex system\MZVertexBuffer.h">
+      <Filter>View\Graphics\Vertex system</Filter>
+    </ClInclude>
+    <ClInclude Include="View\Graphics\Vertex system\MZVertexBufferType.h">
+      <Filter>View\Graphics\Vertex system</Filter>
+    </ClInclude>
+    <ClInclude Include="View\Graphics\Vertex system\MZVertexSystem.h">
+      <Filter>View\Graphics\Vertex system</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Model">
@@ -172,6 +199,9 @@
     </Filter>
     <Filter Include="View\Graphics\Animation system">
       <UniqueIdentifier>{e330f782-e55c-4f6a-8af1-32b71183c3bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="View\Graphics\Vertex system">
+      <UniqueIdentifier>{135aa6ce-82a9-43df-8604-7ac0fe220273}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

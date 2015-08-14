@@ -18,9 +18,9 @@ C:\Users\AG\Documents\Visual Studio 2012\Projects\RoboLabWP\RoboLabWP\RoboLabWP\
 C:\Users\AG\Documents\Visual Studio 2012\Projects\RoboLabWP\RoboLabWP\RoboLabWP\obj\ARM\Debug\RoboLabWP.pdb
 C:\Users\AG\documents\visual studio 2012\Projects\RoboLabWP\RoboLabWP\RoboLabWP\obj\ARM\Debug\XapCacheFile.xml
 C:\Users\AG\Documents\Visual Studio 2012\Projects\RoboLabWP\RoboLabWP\RoboLabWP\obj\ARM\Debug\RoboLabWP.csprojResolveAssemblyReference.cache
-C:\Users\AG\Documents\Visual Studio 2012\Projects\RoboLabWP\RoboLabWP\RoboLabWP\Bin\ARM\Debug\RoboLabWPComp.pdb
 C:\Users\AG\documents\visual studio 2012\Projects\RoboLabWP\RoboLabWP\RoboLabWP\obj\ARM\Debug\Pages\GamePage.g.cs
 C:\Users\AG\documents\visual studio 2012\Projects\RoboLabWP\RoboLabWP\RoboLabWP\obj\ARM\Debug\Pages\MainPage.g.cs
 C:\Users\AG\documents\visual studio 2012\Projects\RoboLabWP\RoboLabWP\RoboLabWP\obj\ARM\Debug\Pages\AchivmentsPage.g.cs
 C:\Users\AG\documents\visual studio 2012\Projects\RoboLabWP\RoboLabWP\RoboLabWP\Bin\ARM\Debug\microsoft.phone.controls.toolkit.dll
 C:\Users\AG\documents\visual studio 2012\Projects\RoboLabWP\RoboLabWP\RoboLabWP\obj\ARM\Debug\Pages\SettingsPage.g.cs
+C:\Users\AG\Documents\Visual Studio 2012\Projects\RoboLabWP\RoboLabWP\RoboLabWP\Bin\ARM\Debug\RoboLabWPComp.pdb

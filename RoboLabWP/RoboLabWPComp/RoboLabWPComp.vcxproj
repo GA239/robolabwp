@@ -170,6 +170,11 @@
     <ClInclude Include="View\Graphics\Matrix system\MZMatrixSystem.h" />
     <ClInclude Include="View\Graphics\Shader sistem\MZProgram.h" />
     <ClInclude Include="View\Graphics\Shader sistem\MZShaderSystem.h" />
+    <ClInclude Include="View\Graphics\Vertex system\MZGeometry.h" />
+    <ClInclude Include="View\Graphics\Vertex system\MZVertexArrayObject.h" />
+    <ClInclude Include="View\Graphics\Vertex system\MZVertexBuffer.h" />
+    <ClInclude Include="View\Graphics\Vertex system\MZVertexBufferType.h" />
+    <ClInclude Include="View\Graphics\Vertex system\MZVertexSystem.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AngleBase.cpp" />
@@ -196,6 +201,10 @@
     <ClCompile Include="View\Graphics\Matrix system\MZMatrixSystem.cpp" />
     <ClCompile Include="View\Graphics\Shader sistem\MZProgram.cpp" />
     <ClCompile Include="View\Graphics\Shader sistem\MZShaderSystem.cpp" />
+    <ClCompile Include="View\Graphics\Vertex system\MZGeometry.cpp" />
+    <ClCompile Include="View\Graphics\Vertex system\MZVertexArrayObject.cpp" />
+    <ClCompile Include="View\Graphics\Vertex system\MZVertexBuffer.cpp" />
+    <ClCompile Include="View\Graphics\Vertex system\MZVertexSystem.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\..\..\Downloads\angleproject-dev\samples\gles2_book\Common\esUtil_phone.vcxproj">
