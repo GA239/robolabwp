@@ -5,7 +5,7 @@
 
 #include "AngleBase.h"
 #include <DirectXMath.h>
-
+#include <stdlib.h>
 
 // This class renders a simple spinning cube.
 ref class CubeRenderer sealed : public AngleBase
@@ -21,8 +21,11 @@ public:
 	virtual void OnRender() override;
     virtual void CreateGLResources() override;
 
+
+
 private:
     void UpdatePerspectiveMatrix();
+	GLuint loadtexture( char* fileName );
 
     bool m_loadingComplete;
     GLuint m_colorProgram;

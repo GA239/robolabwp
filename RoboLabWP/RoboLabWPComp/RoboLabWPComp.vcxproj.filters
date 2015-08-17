@@ -69,6 +69,12 @@
     <ClCompile Include="View\Graphics\Vertex system\MZVertexSystem.cpp">
       <Filter>View\Graphics\Vertex system</Filter>
     </ClCompile>
+    <ClCompile Include="View\Graphics\Texture system\MZColor.cpp">
+      <Filter>View\Graphics\Texture system</Filter>
+    </ClCompile>
+    <ClCompile Include="View\Graphics\Texture system\MZTextureSystem.cpp">
+      <Filter>View\Graphics\Texture system</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AngleBase.h" />
@@ -171,6 +177,12 @@
     <ClInclude Include="View\Graphics\Vertex system\MZVertexSystem.h">
       <Filter>View\Graphics\Vertex system</Filter>
     </ClInclude>
+    <ClInclude Include="View\Graphics\Texture system\MZColor.h">
+      <Filter>View\Graphics\Texture system</Filter>
+    </ClInclude>
+    <ClInclude Include="View\Graphics\Texture system\MZTextureSystem.h">
+      <Filter>View\Graphics\Texture system</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Model">
@@ -202,6 +214,9 @@
     </Filter>
     <Filter Include="View\Graphics\Vertex system">
       <UniqueIdentifier>{135aa6ce-82a9-43df-8604-7ac0fe220273}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="View\Graphics\Texture system">
+      <UniqueIdentifier>{7dfdf96a-e0df-4f91-a6fc-97f581bd0245}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

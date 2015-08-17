@@ -4,6 +4,7 @@
 #include "CubeRenderer.h"
 
 #include "..\shader.h"
+#include "esUtil.h"
 
 using namespace DirectX;
 using namespace Microsoft::WRL;
@@ -36,6 +37,34 @@ void CubeRenderer::CreateGLResources()
 	//glViewport(0, 0, static_cast<UINT>(m_renderTargetSize.Width), static_cast<UINT>(m_renderTargetSize.Height));
     glEnable(GL_DEPTH_TEST);
     m_loadingComplete = true;
+}
+
+GLuint CubeRenderer::loadtexture( char* fileName )
+{
+   int width,
+       height;
+
+   char *buffer = esLoadTGA ( fileName, &width, &height );
+   GLuint texId;
+
+   if ( buffer == NULL )
+   {
+      esLogMessage ( "Error loading (%s) image.\n", fileName );
+      return 0;
+   }
+
+   glGenTextures ( 1, &texId );
+   glBindTexture ( GL_TEXTURE_2D, texId );
+
+   glTexImage2D ( GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, buffer );
+   glTexParameteri ( GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR );
+   glTexParameteri ( GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR );
+   glTexParameteri ( GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE );
+   glTexParameteri ( GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE );
+
+   free ( buffer );
+
+   return texId;
 }
 
 void CubeRenderer::CreateWindowSizeDependentResources()
