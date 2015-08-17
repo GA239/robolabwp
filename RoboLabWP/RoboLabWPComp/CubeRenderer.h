@@ -7,6 +7,12 @@
 #include <DirectXMath.h>
 #include <stdlib.h>
 
+#include <string>
+
+using namespace std;
+
+
+
 // This class renders a simple spinning cube.
 ref class CubeRenderer sealed : public AngleBase
 {
@@ -26,6 +32,7 @@ public:
 private:
     void UpdatePerspectiveMatrix();
 	GLuint loadtexture( char* fileName );
+	GLuint loadtextureMOD(const string &path);
 
     bool m_loadingComplete;
     GLuint m_colorProgram;

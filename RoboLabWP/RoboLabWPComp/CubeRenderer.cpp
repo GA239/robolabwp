@@ -5,6 +5,7 @@
 
 #include "..\shader.h"
 #include "esUtil.h"
+#include "tga_utils.h"
 
 using namespace DirectX;
 using namespace Microsoft::WRL;
@@ -37,6 +38,17 @@ void CubeRenderer::CreateGLResources()
 	//glViewport(0, 0, static_cast<UINT>(m_renderTargetSize.Width), static_cast<UINT>(m_renderTargetSize.Height));
     glEnable(GL_DEPTH_TEST);
     m_loadingComplete = true;
+}
+
+GLuint CubeRenderer::loadtextureMOD(const string &path)
+{
+    TGAImage img;
+    if (!LoadTGAImageFromFile(path, &img))
+    {
+        return 0;
+    }
+
+    return LoadTextureFromTGAImage(img);
 }
 
 GLuint CubeRenderer::loadtexture( char* fileName )
