@@ -1,44 +1,10 @@
-﻿Сборка начата 17.08.2015 20:44:06.
-     1>Проект "c:\Users\AG\Documents\Visual Studio 2012\Projects\RoboLabWP\RoboLabWP\RoboLabWPComp\RoboLabWPComp.vcxproj" в узле 3 (целевые объекты Rebuild).
+﻿Build started 18.08.2015 21:21:44.
+     1>Project "C:\MANUAL_INFO\ANDR\robolabwp\RoboLabWP\RoboLabWPComp\RoboLabWPComp.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\bin\x86_arm\CL.exe /c /I"C:\Users\AG\Downloads\angleproject-dev\samples\gles2_book\Common" /I"C:\Users\AG\Downloads\angleproject-dev\src\common" /I"C:\Users\AG\Downloads\angleproject-dev\include" /I"c:\Users\AG\Documents\Visual Studio 2012\Projects\RoboLabWP\RoboLabWP\RoboLabWPComp\\" /I"Generated Files\\" /IARM\Debug\ /AI"C:\Program Files (x86)\Windows Phone Kits\8.0\Windows Metadata" /Zi /ZW /ZW:nostdlib /nologo /W3 /WX- /sdl /MP /Od /Oy- /D _WINRT_DLL /D GL_GLEXT_PROTOTYPES /D _WINDLL /D _UNICODE /D UNICODE /D _DEBUG /D WINAPI_FAMILY=WINAPI_FAMILY_PHONE_APP /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"pch.h" /Fp"ARM\Debug\RoboLabWPComp.pch" /Fo"ARM\Debug\\" /Fd"ARM\Debug\vc110.pdb" /Gd /TP /FU"C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\lib\arm\platform.winmd" /FU"C:\Program Files (x86)\Windows Phone Kits\8.0\Windows Metadata\Windows.winmd" /analyze- /errorReport:prompt pch.cpp
-         pch.cpp
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\bin\x86_arm\CL.exe /c /I"C:\Users\AG\Downloads\angleproject-dev\samples\gles2_book\Common" /I"C:\Users\AG\Downloads\angleproject-dev\src\common" /I"C:\Users\AG\Downloads\angleproject-dev\include" /I"c:\Users\AG\Documents\Visual Studio 2012\Projects\RoboLabWP\RoboLabWP\RoboLabWPComp\\" /I"Generated Files\\" /IARM\Debug\ /AI"C:\Program Files (x86)\Windows Phone Kits\8.0\Windows Metadata" /Zi /ZW /ZW:nostdlib /nologo /W3 /WX- /sdl /MP /Od /Oy- /D _WINRT_DLL /D GL_GLEXT_PROTOTYPES /D _WINDLL /D _UNICODE /D UNICODE /D _DEBUG /D WINAPI_FAMILY=WINAPI_FAMILY_PHONE_APP /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"pch.h" /Fp"ARM\Debug\RoboLabWPComp.pch" /Fo"ARM\Debug\\" /Fd"ARM\Debug\vc110.pdb" /Gd /TP /FU"C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\lib\arm\platform.winmd" /FU"C:\Program Files (x86)\Windows Phone Kits\8.0\Windows Metadata\Windows.winmd" /analyze- /errorReport:prompt AngleBase.cpp CubeRenderer.cpp Direct3DInterop.cpp Direct3DContentProvider.cpp "Model\Basic Types\MZMotion.cpp" "Model\Basic Types\MZPosition.cpp" "Model\Game\Game Objects\MZButton.cpp" "Model\Game\Game Objects\MZExit.cpp" "Model\Game\Game Objects\MZFlow.cpp" "Model\Game\Game Objects\MZOneWayWall.cpp" "Model\Game\Game Objects\MZRotatingCell.cpp" Model\Game\MZCell.cpp Model\Game\MZCellMatrix.cpp Model\Game\MZGame.cpp Model\Game\MZMaze.cpp Model\Game\MZVisitsMatrix.cpp tga_utils.cpp "View\Graphics\Animation system\MZAlphaMap.cpp" "View\Graphics\Animation system\MZAnimationSystem.cpp" "View\Graphics\Matrix system\MZMatrixSystem.cpp" "View\Graphics\Shader sistem\MZProgram.cpp" "View\Graphics\Shader sistem\MZShaderSystem.cpp" "View\Graphics\Texture system\MZColor.cpp" "View\Graphics\Texture system\MZTextureSystem.cpp" "View\Graphics\Vertex system\MZGeometry.cpp" "View\Graphics\Vertex system\MZVertexArrayObject.cpp" "View\Graphics\Vertex system\MZVertexBuffer.cpp" "View\Graphics\Vertex system\MZVertexSystem.cpp"
-         AngleBase.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\bin\x86_arm\CL.exe /c /I"C:\Users\AG\Downloads\angleproject-dev\samples\gles2_book\Common" /I"C:\Users\AG\Downloads\angleproject-dev\src\common" /I"C:\Users\AG\Downloads\angleproject-dev\include" /IC:\MANUAL_INFO\ANDR\robolabwp\RoboLabWP\RoboLabWPComp\ /I"Generated Files\\" /IARM\Debug\ /AI"C:\Program Files (x86)\Windows Phone Kits\8.0\Windows Metadata" /Zi /ZW /ZW:nostdlib /nologo /W3 /WX- /sdl /MP /Od /Oy- /D _WINRT_DLL /D GL_GLEXT_PROTOTYPES /D _WINDLL /D _UNICODE /D UNICODE /D _DEBUG /D WINAPI_FAMILY=WINAPI_FAMILY_PHONE_APP /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"pch.h" /Fp"ARM\Debug\RoboLabWPComp.pch" /Fo"ARM\Debug\\" /Fd"ARM\Debug\vc110.pdb" /Gd /TP /FU"C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\lib\arm\platform.winmd" /FU"C:\Program Files (x86)\Windows Phone Kits\8.0\Windows Metadata\Windows.winmd" /analyze- /errorReport:prompt CubeRenderer.cpp
          CubeRenderer.cpp
-         Direct3DInterop.cpp
-         Direct3DContentProvider.cpp
-         MZMotion.cpp
-         MZPosition.cpp
-         MZButton.cpp
-         MZExit.cpp
-         MZFlow.cpp
-         MZOneWayWall.cpp
-         MZRotatingCell.cpp
-         MZCell.cpp
-     1>Model\Game\MZCell.cpp(26): warning C4800: int: принудительно задано логическое значение "true" или "false" (предупреждение о производительности)
-         MZCellMatrix.cpp
-         MZGame.cpp
-         MZMaze.cpp
-         MZVisitsMatrix.cpp
-     1>Model\Game\MZMaze.cpp(34): warning C4800: int: принудительно задано логическое значение "true" или "false" (предупреждение о производительности)
-     1>Model\Game\MZMaze.cpp(35): warning C4800: int: принудительно задано логическое значение "true" или "false" (предупреждение о производительности)
-     1>Model\Game\MZMaze.cpp(36): warning C4800: int: принудительно задано логическое значение "true" или "false" (предупреждение о производительности)
-         tga_utils.cpp
-         MZAlphaMap.cpp
-         MZAnimationSystem.cpp
-         MZMatrixSystem.cpp
-     1>View\Graphics\Matrix system\MZMatrixSystem.cpp(81): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-         MZProgram.cpp
-         MZShaderSystem.cpp
-         MZColor.cpp
-         MZTextureSystem.cpp
-         MZGeometry.cpp
-         MZVertexArrayObject.cpp
-         MZVertexBuffer.cpp
-         MZVertexSystem.cpp
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\bin\x86_arm\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\AG\Documents\Visual Studio 2012\Projects\RoboLabWP\ARM\Debug\RoboLabWPComp\RoboLabWPComp.dll" /INCREMENTAL /NOLOGO d3d11.lib WindowsPhoneCore.lib RuntimeObject.lib PhoneAppModelHost.lib /NODEFAULTLIB:ole32.lib /MANIFEST:NO /DEBUG /PDB:"C:\Users\AG\Documents\Visual Studio 2012\Projects\RoboLabWP\ARM\Debug\RoboLabWPComp\RoboLabWPComp.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /WINMD /WINMDFILE:"C:\Users\AG\Documents\Visual Studio 2012\Projects\RoboLabWP\ARM\Debug\RoboLabWPComp\RoboLabWPComp.winmd" /DYNAMICBASE /NXCOMPAT /MACHINE:ARM /DLL ARM\Debug\AngleBase.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\bin\x86_arm\link.exe /ERRORREPORT:PROMPT /OUT:"C:\MANUAL_INFO\ANDR\robolabwp\ARM\Debug\RoboLabWPComp\RoboLabWPComp.dll" /INCREMENTAL /NOLOGO d3d11.lib WindowsPhoneCore.lib RuntimeObject.lib PhoneAppModelHost.lib /NODEFAULTLIB:ole32.lib /MANIFEST:NO /DEBUG /PDB:"C:\MANUAL_INFO\ANDR\robolabwp\ARM\Debug\RoboLabWPComp\RoboLabWPComp.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /WINMD /WINMDFILE:"C:\MANUAL_INFO\ANDR\robolabwp\ARM\Debug\RoboLabWPComp\RoboLabWPComp.winmd" /DYNAMICBASE /NXCOMPAT /MACHINE:ARM /DLL ARM\Debug\AngleBase.obj
          ARM\Debug\CubeRenderer.obj
          ARM\Debug\Direct3DInterop.obj
          ARM\Debug\Direct3DContentProvider.obj
@@ -67,13 +33,13 @@
          ARM\Debug\MZVertexArrayObject.obj
          ARM\Debug\MZVertexBuffer.obj
          ARM\Debug\MZVertexSystem.obj
-         "C:\Users\AG\Documents\Visual Studio 2012\Projects\RoboLabWP\WP8\redist\vs2012\ARM\Debug\libEGL_phone\libEGL_phone.lib"
-         "C:\Users\AG\Documents\Visual Studio 2012\Projects\RoboLabWP\WP8\redist\vs2012\ARM\Debug\libGLESv2_phone\libGLESv2_phone.lib"
-         "C:\Users\AG\Documents\Visual Studio 2012\Projects\RoboLabWP\WP8\redist\vs2012\ARM\Debug\esUtil_phone\esUtil_phone.lib"
-            Creating library C:\Users\AG\Documents\Visual Studio 2012\Projects\RoboLabWP\ARM\Debug\RoboLabWPComp\RoboLabWPComp.lib and object C:\Users\AG\Documents\Visual Studio 2012\Projects\RoboLabWP\ARM\Debug\RoboLabWPComp\RoboLabWPComp.exp
-         RoboLabWPComp.vcxproj -> C:\Users\AG\Documents\Visual Studio 2012\Projects\RoboLabWP\ARM\Debug\RoboLabWPComp\RoboLabWPComp.dll
-     1>Построение проекта "c:\Users\AG\Documents\Visual Studio 2012\Projects\RoboLabWP\RoboLabWP\RoboLabWPComp\RoboLabWPComp.vcxproj" завершено (целевые объекты Rebuild).
+         C:\MANUAL_INFO\ANDR\robolabwp\WP8\redist\vs2012\ARM\Debug\libEGL_phone\libEGL_phone.lib
+         C:\MANUAL_INFO\ANDR\robolabwp\WP8\redist\vs2012\ARM\Debug\libGLESv2_phone\libGLESv2_phone.lib
+         C:\MANUAL_INFO\ANDR\robolabwp\WP8\redist\vs2012\ARM\Debug\esUtil_phone\esUtil_phone.lib
+            Creating library C:\MANUAL_INFO\ANDR\robolabwp\ARM\Debug\RoboLabWPComp\RoboLabWPComp.lib and object C:\MANUAL_INFO\ANDR\robolabwp\ARM\Debug\RoboLabWPComp\RoboLabWPComp.exp
+         RoboLabWPComp.vcxproj -> C:\MANUAL_INFO\ANDR\robolabwp\ARM\Debug\RoboLabWPComp\RoboLabWPComp.dll
+     1>Done Building Project "C:\MANUAL_INFO\ANDR\robolabwp\RoboLabWP\RoboLabWPComp\RoboLabWPComp.vcxproj" (Build target(s)).
 
-Построение успешно завершено.
+Build succeeded.
 
-Затраченное время: 00:00:24.80
+Time Elapsed 00:00:04.22

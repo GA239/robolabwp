@@ -149,6 +149,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="angle.tga" />
+    <Content Include="basemap.tga" />
+    <Content Include="lightmap.tga" />
     <None Include="Properties\AppManifest.xml" />
     <None Include="Properties\WMAppManifest.xml">
       <SubType>Designer</SubType>

@@ -18,6 +18,7 @@ ref class CubeRenderer sealed : public AngleBase
 {
 public:
 	CubeRenderer();
+	virtual ~CubeRenderer();
 
 	// Direct3DBase methods.
 	virtual void CreateDeviceResources() override;
@@ -31,7 +32,7 @@ public:
 
 private:
     void UpdatePerspectiveMatrix();
-	GLuint loadtexture( char* fileName );
+	//GLuint loadtexture( char* fileName );
 	GLuint loadtextureMOD(const string &path);
 
     bool m_loadingComplete;
@@ -42,4 +43,19 @@ private:
     DirectX::XMMATRIX m_projectionMatrix;
     DirectX::XMMATRIX m_viewMatrix;
     DirectX::XMMATRIX m_modelMatrix;
+
+	// Handle to a program object
+	GLuint mProgram;
+
+	// Attribute locations
+	GLint mPositionLoc;
+	GLint mTexCoordLoc;
+
+	// Sampler locations
+	GLint mBaseMapLoc;
+	GLint mLightMapLoc;
+
+	// Texture handle
+	GLuint mBaseMapTexID;
+	GLuint mLightMapTexID;
 };

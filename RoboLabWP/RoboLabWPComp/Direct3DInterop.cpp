@@ -23,11 +23,14 @@ Direct3DInterop::Direct3DInterop()
 {
     m_renderer = ref new CubeRenderer();
 
-
     //Profiler::Initialize();
 }
 
-
+void Direct3DInterop::clean()
+{
+	delete(m_renderer);
+	delete(this);
+}
 
 
 IDrawingSurfaceContentProvider^ Direct3DInterop::CreateContentProvider()

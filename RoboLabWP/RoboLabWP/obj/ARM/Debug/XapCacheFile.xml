@@ -1,18 +1,21 @@
-﻿<xapCache source="c:\Users\AG\Documents\Visual Studio 2012\Projects\RoboLabWP\RoboLabWP\RoboLabWP\Bin\ARM\Debug\RoboLabWP_Debug_ARM.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="17.08.2015 20:44:59">
-  <file source="c:\Users\AG\Documents\Visual Studio 2012\Projects\RoboLabWP\RoboLabWP\RoboLabWP\obj\ARM\Debug\RoboLabWP.dll" archivePath="RoboLabWP.dll" lastWriteTime="17.08.2015 20:44:40" />
-  <file source="c:\Users\AG\Documents\Visual Studio 2012\Projects\RoboLabWP\RoboLabWP\RoboLabWP\Assets\AlignmentGrid.png" archivePath="Assets\AlignmentGrid.png" lastWriteTime="07.07.2015 22:13:00" />
-  <file source="c:\Users\AG\Documents\Visual Studio 2012\Projects\RoboLabWP\RoboLabWP\RoboLabWP\Assets\ApplicationIcon.png" archivePath="Assets\ApplicationIcon.png" lastWriteTime="07.07.2015 22:13:00" />
-  <file source="c:\Users\AG\Documents\Visual Studio 2012\Projects\RoboLabWP\RoboLabWP\RoboLabWP\Assets\Tiles\FlipCycleTileLarge.png" archivePath="Assets\Tiles\FlipCycleTileLarge.png" lastWriteTime="07.07.2015 22:13:00" />
-  <file source="c:\Users\AG\Documents\Visual Studio 2012\Projects\RoboLabWP\RoboLabWP\RoboLabWP\Assets\Tiles\FlipCycleTileMedium.png" archivePath="Assets\Tiles\FlipCycleTileMedium.png" lastWriteTime="07.07.2015 22:13:00" />
-  <file source="c:\Users\AG\Documents\Visual Studio 2012\Projects\RoboLabWP\RoboLabWP\RoboLabWP\Assets\Tiles\FlipCycleTileSmall.png" archivePath="Assets\Tiles\FlipCycleTileSmall.png" lastWriteTime="07.07.2015 22:13:00" />
-  <file source="c:\Users\AG\Documents\Visual Studio 2012\Projects\RoboLabWP\RoboLabWP\RoboLabWP\Assets\Tiles\IconicTileMediumLarge.png" archivePath="Assets\Tiles\IconicTileMediumLarge.png" lastWriteTime="07.07.2015 22:13:00" />
-  <file source="c:\Users\AG\Documents\Visual Studio 2012\Projects\RoboLabWP\RoboLabWP\RoboLabWP\Assets\Tiles\IconicTileSmall.png" archivePath="Assets\Tiles\IconicTileSmall.png" lastWriteTime="07.07.2015 22:13:00" />
-  <file source="c:\Users\AG\Documents\Visual Studio 2012\Projects\RoboLabWP\RoboLabWP\RoboLabWP\Bin\ARM\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="17.08.2015 20:44:44" />
-  <file source="c:\Users\AG\Documents\Visual Studio 2012\Projects\maze\packages\wptoolkit.4.2013.08.16\lib\sl3-wp\microsoft.phone.controls.toolkit.dll" archivePath="microsoft.phone.controls.toolkit.dll" lastWriteTime="21.05.2015 18:54:54" />
-  <file source="C:\Users\AG\Documents\Visual Studio 2012\Projects\RoboLabWP\ARM\Debug\RoboLabWPComp\RoboLabWPComp.winmd" archivePath="RoboLabWPComp.winmd" lastWriteTime="17.08.2015 20:44:29" />
-  <file source="C:\Users\AG\Documents\Visual Studio 2012\Projects\RoboLabWP\ARM\Debug\RoboLabWPComp\RoboLabWPComp.dll" archivePath="RoboLabWPComp.dll" lastWriteTime="17.08.2015 20:44:30" />
-  <file source="c:\Users\AG\Documents\Visual Studio 2012\Projects\RoboLabWP\RoboLabWP\RoboLabWP\Zzu_tOENinQ.png" archivePath="Zzu_tOENinQ.png" lastWriteTime="07.07.2015 17:18:58" />
-  <file source="C:\Users\AG\Documents\Visual Studio 2012\Projects\RoboLabWP\WP8\redist\vs2012\ARM\Debug\libEGL_phone\libEGL_phone.dll" archivePath="libEGL_phone.dll" lastWriteTime="17.08.2015 20:44:01" />
-  <file source="C:\Users\AG\Documents\Visual Studio 2012\Projects\RoboLabWP\WP8\redist\vs2012\ARM\Debug\libGLESv2_phone\libGLESv2_phone.dll" archivePath="libGLESv2_phone.dll" lastWriteTime="17.08.2015 20:43:44" />
-  <file source="c:\Users\AG\Documents\Visual Studio 2012\Projects\RoboLabWP\RoboLabWP\RoboLabWP\Bin\ARM\Debug\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="17.08.2015 20:44:55" />
+﻿<xapCache source="C:\MANUAL_INFO\ANDR\robolabwp\RoboLabWP\RoboLabWP\Bin\ARM\Debug\RoboLabWP_Debug_ARM.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="18.08.2015 21:21:58">
+  <file source="C:\MANUAL_INFO\ANDR\robolabwp\RoboLabWP\RoboLabWP\obj\ARM\Debug\RoboLabWP.dll" archivePath="RoboLabWP.dll" lastWriteTime="18.08.2015 21:21:49" />
+  <file source="C:\MANUAL_INFO\ANDR\robolabwp\RoboLabWP\RoboLabWP\angle.tga" archivePath="angle.tga" lastWriteTime="18.08.2015 18:44:22" />
+  <file source="C:\MANUAL_INFO\ANDR\robolabwp\RoboLabWP\RoboLabWP\basemap.tga" archivePath="basemap.tga" lastWriteTime="18.08.2015 18:52:57" />
+  <file source="C:\MANUAL_INFO\ANDR\robolabwp\RoboLabWP\RoboLabWP\lightmap.tga" archivePath="lightmap.tga" lastWriteTime="18.08.2015 18:52:57" />
+  <file source="C:\MANUAL_INFO\ANDR\robolabwp\RoboLabWP\RoboLabWP\Assets\AlignmentGrid.png" archivePath="Assets\AlignmentGrid.png" lastWriteTime="18.08.2015 15:10:16" />
+  <file source="C:\MANUAL_INFO\ANDR\robolabwp\RoboLabWP\RoboLabWP\Assets\ApplicationIcon.png" archivePath="Assets\ApplicationIcon.png" lastWriteTime="18.08.2015 15:10:16" />
+  <file source="C:\MANUAL_INFO\ANDR\robolabwp\RoboLabWP\RoboLabWP\Assets\Tiles\FlipCycleTileLarge.png" archivePath="Assets\Tiles\FlipCycleTileLarge.png" lastWriteTime="18.08.2015 15:10:16" />
+  <file source="C:\MANUAL_INFO\ANDR\robolabwp\RoboLabWP\RoboLabWP\Assets\Tiles\FlipCycleTileMedium.png" archivePath="Assets\Tiles\FlipCycleTileMedium.png" lastWriteTime="18.08.2015 15:10:16" />
+  <file source="C:\MANUAL_INFO\ANDR\robolabwp\RoboLabWP\RoboLabWP\Assets\Tiles\FlipCycleTileSmall.png" archivePath="Assets\Tiles\FlipCycleTileSmall.png" lastWriteTime="18.08.2015 15:10:16" />
+  <file source="C:\MANUAL_INFO\ANDR\robolabwp\RoboLabWP\RoboLabWP\Assets\Tiles\IconicTileMediumLarge.png" archivePath="Assets\Tiles\IconicTileMediumLarge.png" lastWriteTime="18.08.2015 15:10:16" />
+  <file source="C:\MANUAL_INFO\ANDR\robolabwp\RoboLabWP\RoboLabWP\Assets\Tiles\IconicTileSmall.png" archivePath="Assets\Tiles\IconicTileSmall.png" lastWriteTime="18.08.2015 15:10:16" />
+  <file source="C:\MANUAL_INFO\ANDR\robolabwp\RoboLabWP\RoboLabWP\Bin\ARM\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="18.08.2015 21:21:52" />
+  <file source="C:\MANUAL_INFO\ANDR\robolabwp\RoboLabWP\RoboLabWP\Bin\ARM\Debug\microsoft.phone.controls.toolkit.dll" archivePath="microsoft.phone.controls.toolkit.dll" lastWriteTime="18.08.2015 15:10:17" />
+  <file source="C:\MANUAL_INFO\ANDR\robolabwp\ARM\Debug\RoboLabWPComp\RoboLabWPComp.winmd" archivePath="RoboLabWPComp.winmd" lastWriteTime="18.08.2015 21:21:47" />
+  <file source="C:\MANUAL_INFO\ANDR\robolabwp\ARM\Debug\RoboLabWPComp\RoboLabWPComp.dll" archivePath="RoboLabWPComp.dll" lastWriteTime="18.08.2015 21:21:48" />
+  <file source="C:\MANUAL_INFO\ANDR\robolabwp\RoboLabWP\RoboLabWP\Zzu_tOENinQ.png" archivePath="Zzu_tOENinQ.png" lastWriteTime="18.08.2015 15:10:17" />
+  <file source="C:\MANUAL_INFO\ANDR\robolabwp\WP8\redist\vs2012\ARM\Debug\libEGL_phone\libEGL_phone.dll" archivePath="libEGL_phone.dll" lastWriteTime="18.08.2015 17:29:58" />
+  <file source="C:\MANUAL_INFO\ANDR\robolabwp\WP8\redist\vs2012\ARM\Debug\libGLESv2_phone\libGLESv2_phone.dll" archivePath="libGLESv2_phone.dll" lastWriteTime="18.08.2015 17:29:51" />
+  <file source="C:\MANUAL_INFO\ANDR\robolabwp\RoboLabWP\RoboLabWP\Bin\ARM\Debug\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="18.08.2015 21:21:55" />
 </xapCache>

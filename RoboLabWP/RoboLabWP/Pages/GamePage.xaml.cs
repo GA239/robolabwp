@@ -1,21 +1,11 @@
 ﻿#define DISPLAY_MEMORY
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
 using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
-using Microsoft.Phone.Shell;
 using RoboLabWPComp;
 
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Animation;
-using System.Windows.Shapes;
 using Windows.Graphics.Display;
 using System.Windows.Threading;
 using Microsoft.Phone.Info;
@@ -35,6 +25,10 @@ namespace RoboLabWP
             //Game = MZGame.getInstance();
             InitializeComponent();
             DrawingSurfaceBackground_Loaded();
+            //NavigationService.Navigating += new NavigatingCancelEventHandler(NavigationService_Navigatingg);
+
+            this.Loaded += new RoutedEventHandler(CancelNavigationPage_Loaded);
+            this.Unloaded += new RoutedEventHandler(CancelNavigationPage_Unloaded);
 
             TimerPanel.Visibility = System.Windows.Visibility.Collapsed;
 #if DISPLAY_MEMORY
@@ -96,7 +90,16 @@ namespace RoboLabWP
             }
         }
 
-        private void StartTimer()
+        void CancelNavigationPage_Loaded(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigating += new NavigatingCancelEventHandler(NavigationService_Navigatingg);
+        }
+        void CancelNavigationPage_Unloaded(object sender, RoutedEventArgs e)
+        {         
+            NavigationService.Navigating -= (NavigationService_Navigatingg);
+        }
+
+private void StartTimer()
         {
             m_timer = new DispatcherTimer();
             m_timer.Interval = new TimeSpan(0, 0, 1);
@@ -117,6 +120,15 @@ namespace RoboLabWP
             catch (Exception ex)
             {
                 MemoryTextBlock.Text = ex.Message;
+            }
+        }
+
+        void NavigationService_Navigatingg(object sender, NavigatingCancelEventArgs e)
+        {
+            if (e.NavigationMode == NavigationMode.Back)
+            {
+                m_d3dInterop.clean();
+                NavigationService.Navigating -= (NavigationService_Navigatingg);
             }
         }
     }

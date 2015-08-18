@@ -24,3 +24,28 @@ C:\Users\AG\documents\visual studio 2012\Projects\RoboLabWP\RoboLabWP\RoboLabWP\
 C:\Users\AG\documents\visual studio 2012\Projects\RoboLabWP\RoboLabWP\RoboLabWP\Bin\ARM\Debug\microsoft.phone.controls.toolkit.dll
 C:\Users\AG\documents\visual studio 2012\Projects\RoboLabWP\RoboLabWP\RoboLabWP\obj\ARM\Debug\Pages\SettingsPage.g.cs
 C:\Users\AG\Documents\Visual Studio 2012\Projects\RoboLabWP\RoboLabWP\RoboLabWP\Bin\ARM\Debug\RoboLabWPComp.pdb
+C:\MANUAL_INFO\ANDR\robolabwp\RoboLabWP\RoboLabWP\obj\ARM\Debug\RoboLabWP.csprojResolveAssemblyReference.cache
+C:\MANUAL_INFO\ANDR\robolabwp\RoboLabWP\RoboLabWP\obj\ARM\Debug\App.g.cs
+C:\MANUAL_INFO\ANDR\robolabwp\RoboLabWP\RoboLabWP\obj\ARM\Debug\Pages\AchivmentsPage.g.cs
+C:\MANUAL_INFO\ANDR\robolabwp\RoboLabWP\RoboLabWP\obj\ARM\Debug\Pages\GamePage.g.cs
+C:\MANUAL_INFO\ANDR\robolabwp\RoboLabWP\RoboLabWP\obj\ARM\Debug\Pages\MainPage.g.cs
+C:\MANUAL_INFO\ANDR\robolabwp\RoboLabWP\RoboLabWP\obj\ARM\Debug\Pages\SettingsPage.g.cs
+C:\MANUAL_INFO\ANDR\robolabwp\RoboLabWP\RoboLabWP\obj\ARM\Debug\RoboLabWP.g.resources
+C:\MANUAL_INFO\ANDR\robolabwp\RoboLabWP\RoboLabWP\obj\ARM\Debug\RoboLabWP.Resources.AppResources.resources
+C:\MANUAL_INFO\ANDR\robolabwp\RoboLabWP\RoboLabWP\obj\ARM\Debug\RoboLabWP.csproj.GenerateResource.Cache
+C:\MANUAL_INFO\ANDR\robolabwp\RoboLabWP\RoboLabWP\Bin\ARM\Debug\Assets\ApplicationIcon.png
+C:\MANUAL_INFO\ANDR\robolabwp\RoboLabWP\RoboLabWP\Bin\ARM\Debug\Assets\Tiles\FlipCycleTileLarge.png
+C:\MANUAL_INFO\ANDR\robolabwp\RoboLabWP\RoboLabWP\Bin\ARM\Debug\Assets\Tiles\FlipCycleTileMedium.png
+C:\MANUAL_INFO\ANDR\robolabwp\RoboLabWP\RoboLabWP\Bin\ARM\Debug\Assets\Tiles\FlipCycleTileSmall.png
+C:\MANUAL_INFO\ANDR\robolabwp\RoboLabWP\RoboLabWP\Bin\ARM\Debug\Assets\Tiles\IconicTileMediumLarge.png
+C:\MANUAL_INFO\ANDR\robolabwp\RoboLabWP\RoboLabWP\Bin\ARM\Debug\Assets\Tiles\IconicTileSmall.png
+C:\MANUAL_INFO\ANDR\robolabwp\RoboLabWP\RoboLabWP\Bin\ARM\Debug\RoboLabWP.dll
+C:\MANUAL_INFO\ANDR\robolabwp\RoboLabWP\RoboLabWP\Bin\ARM\Debug\RoboLabWP.pdb
+C:\MANUAL_INFO\ANDR\robolabwp\RoboLabWP\RoboLabWP\Bin\ARM\Debug\AppManifest.xaml
+C:\MANUAL_INFO\ANDR\robolabwp\RoboLabWP\RoboLabWP\Bin\ARM\Debug\Properties\WMAppManifest.xml
+C:\MANUAL_INFO\ANDR\robolabwp\RoboLabWP\RoboLabWP\Bin\ARM\Debug\RoboLabWP_Debug_ARM.xap
+C:\MANUAL_INFO\ANDR\robolabwp\RoboLabWP\RoboLabWP\Bin\ARM\Debug\RoboLabWPComp.winmd
+C:\MANUAL_INFO\ANDR\robolabwp\RoboLabWP\RoboLabWP\Bin\ARM\Debug\RoboLabWPComp.pdb
+C:\MANUAL_INFO\ANDR\robolabwp\RoboLabWP\RoboLabWP\obj\ARM\Debug\RoboLabWP.dll
+C:\MANUAL_INFO\ANDR\robolabwp\RoboLabWP\RoboLabWP\obj\ARM\Debug\RoboLabWP.pdb
+C:\MANUAL_INFO\ANDR\robolabwp\RoboLabWP\RoboLabWP\obj\ARM\Debug\XapCacheFile.xml

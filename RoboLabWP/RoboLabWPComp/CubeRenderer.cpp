@@ -4,7 +4,8 @@
 #include "CubeRenderer.h"
 
 #include "..\shader.h"
-#include "esUtil.h"
+#include "..\fshader.h"
+//#include "esUtil.h"
 #include "tga_utils.h"
 
 using namespace DirectX;
@@ -27,6 +28,15 @@ void CubeRenderer::CreateDeviceResources()
 	AngleBase::CreateDeviceResources();
 }
 
+CubeRenderer::~CubeRenderer()
+{
+	
+	glDeleteProgram(m_colorProgram);
+	glDeleteProgram(mProgram);
+	glDeleteTextures(1, &mBaseMapTexID);
+	glDeleteTextures(1, &mLightMapTexID);
+}
+
 void CubeRenderer::CreateGLResources()
 {
     m_colorProgram = glCreateProgram();
@@ -34,6 +44,27 @@ void CubeRenderer::CreateGLResources()
     a_positionColor = glGetAttribLocation(m_colorProgram, "a_position");
     a_colorColor = glGetAttribLocation(m_colorProgram, "a_color");
     u_mvpColor = glGetUniformLocation(m_colorProgram, "u_mvp");
+	
+	
+	//texture
+	mProgram = glCreateProgram();
+	glProgramBinaryOES(mProgram, GL_PROGRAM_BINARY_ANGLE, gfProgram, sizeof(gfProgram));
+	// Get the attribute locations
+	mPositionLoc = glGetAttribLocation(mProgram, "a_position");
+	mTexCoordLoc = glGetAttribLocation(mProgram, "a_texCoord");
+	
+	mBaseMapLoc = glGetUniformLocation(mProgram, "s_baseMap");
+	mLightMapLoc = glGetUniformLocation(mProgram, "s_lightMap");
+	
+	// Load the textures
+	mBaseMapTexID = loadtextureMOD("basemap.tga");
+	mLightMapTexID = loadtextureMOD("lightmap.tga");
+	if (mBaseMapTexID == 0 || mLightMapTexID == 0)
+	{
+		m_loadingComplete = false;
+		return;
+	}
+	//texture
 
 	//glViewport(0, 0, static_cast<UINT>(m_renderTargetSize.Width), static_cast<UINT>(m_renderTargetSize.Height));
     glEnable(GL_DEPTH_TEST);
@@ -49,34 +80,6 @@ GLuint CubeRenderer::loadtextureMOD(const string &path)
     }
 
     return LoadTextureFromTGAImage(img);
-}
-
-GLuint CubeRenderer::loadtexture( char* fileName )
-{
-   int width,
-       height;
-
-   char *buffer = esLoadTGA ( fileName, &width, &height );
-   GLuint texId;
-
-   if ( buffer == NULL )
-   {
-      esLogMessage ( "Error loading (%s) image.\n", fileName );
-      return 0;
-   }
-
-   glGenTextures ( 1, &texId );
-   glBindTexture ( GL_TEXTURE_2D, texId );
-
-   glTexImage2D ( GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, buffer );
-   glTexParameteri ( GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR );
-   glTexParameteri ( GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR );
-   glTexParameteri ( GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE );
-   glTexParameteri ( GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE );
-
-   free ( buffer );
-
-   return texId;
 }
 
 void CubeRenderer::CreateWindowSizeDependentResources()
@@ -117,10 +120,12 @@ void CubeRenderer::OnRender()
     XMFLOAT4X4 mvp;
     XMStoreFloat4x4(&mvp, (XMMatrixMultiply(XMMatrixMultiply(m_modelMatrix, m_viewMatrix), m_projectionMatrix)));
 
+	
     glClearColor(0.098f, 0.098f, 0.439f, 1.000f);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-    glUseProgram(m_colorProgram);
+	//////////////////////////////////////////////////////////////////
+/*    glUseProgram(m_colorProgram);
     glUniformMatrix4fv(u_mvpColor, 1, GL_FALSE, &mvp.m[0][0]);
 
     VertexPositionColor cubeVertices[] = 
@@ -155,13 +160,62 @@ void CubeRenderer::OnRender()
         1,3,7, // +z
         1,7,5,
     };
-
-    glEnableVertexAttribArray(a_positionColor);
+	*/
+	//////////////////////////////////////////////////////////////////
+	
+	//glEnableVertexAttribArray(a_positionColor);
     glEnableVertexAttribArray(a_colorColor);
-    glVertexAttribPointer(a_positionColor, 3, GL_FLOAT, GL_FALSE, sizeof(VertexPositionColor), cubeVertices);
-    glVertexAttribPointer(a_colorColor, 3, GL_FLOAT, GL_FALSE, sizeof(VertexPositionColor), reinterpret_cast<char*>(cubeVertices) + sizeof(XMFLOAT3));
-    glDrawElements(GL_TRIANGLES, ARRAYSIZE(cubeIndices), GL_UNSIGNED_SHORT, cubeIndices);
-    glDisableVertexAttribArray(a_positionColor);
+    //glVertexAttribPointer(a_positionColor, 3, GL_FLOAT, GL_FALSE, sizeof(VertexPositionColor), cubeVertices);
+    //glVertexAttribPointer(a_colorColor, 3, GL_FLOAT, GL_FALSE, sizeof(VertexPositionColor), reinterpret_cast<char*>(cubeVertices) + sizeof(XMFLOAT3));
+    //glDrawElements(GL_TRIANGLES, ARRAYSIZE(cubeIndices), GL_UNSIGNED_SHORT, cubeIndices);
+    //glDisableVertexAttribArray(a_positionColor);
     glDisableVertexAttribArray(a_colorColor);
+	
+
+	GLfloat vertices[] =
+	{
+		-0.5f,  0.5f, 0.0f,  // Position 0
+		0.0f,  0.0f,        // TexCoord 0
+		-0.5f, -0.5f, 0.0f,  // Position 1
+		0.0f,  1.0f,        // TexCoord 1
+		0.5f, -0.5f, 0.0f,  // Position 2
+		1.0f,  1.0f,        // TexCoord 2
+		0.5f,  0.5f, 0.0f,  // Position 3
+		1.0f,  0.0f         // TexCoord 3
+	};
+	GLushort indices[] = { 0, 1, 2, 0, 2, 3 };
+
+	// Clear the color buffer
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+	// Use the program object
+	glUseProgram(mProgram);
+
+	// Load the vertex position
+	glVertexAttribPointer(mPositionLoc, 3, GL_FLOAT, GL_FALSE, 5 * sizeof(GLfloat), vertices);
+	// Load the texture coordinate
+	glVertexAttribPointer(mTexCoordLoc, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(GLfloat), vertices + 3);
+	
+	glEnableVertexAttribArray(mPositionLoc);
+	glEnableVertexAttribArray(mTexCoordLoc);
+
+	// Bind the base map
+	glActiveTexture(GL_TEXTURE0);
+	glBindTexture(GL_TEXTURE_2D, mBaseMapTexID);
+
+	// Set the base map sampler to texture unit to 0
+	glUniform1i(mBaseMapLoc, 0);
+
+	// Bind the light map
+	glActiveTexture(GL_TEXTURE1);
+	glBindTexture(GL_TEXTURE_2D, mLightMapTexID);
+
+	// Set the light map sampler to texture unit 1
+	glUniform1i(mLightMapLoc, 1);
+
+	glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_SHORT, indices);
+
+	glDisableVertexAttribArray(mPositionLoc);
+	glDisableVertexAttribArray(mTexCoordLoc);
 }
 

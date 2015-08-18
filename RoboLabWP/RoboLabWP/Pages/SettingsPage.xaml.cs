@@ -58,7 +58,6 @@ namespace RoboLabWP
 
         private void Button_Return_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.GoBack();
             if (Pivott.SelectedIndex == 0)
             {
                 (Application.Current as App).UserGameData.GameSettings.language = MZLanguage.English;
@@ -68,6 +67,7 @@ namespace RoboLabWP
                 (Application.Current as App).UserGameData.GameSettings.language = MZLanguage.Russian;
             }
             (Application.Current as App).UserGameData.updateLanguage();
+            NavigationService.GoBack();
         }
 
         private void toggleSwitch1_Click_1(object sender, RoutedEventArgs e)
