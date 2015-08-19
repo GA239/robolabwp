@@ -2,7 +2,7 @@
 #include "MZTextureSystem.h"
 
 #include "../Shader sistem/MZShaderSystem.h"
-
+#include <glm/gtc/type_ptr.hpp>
 
 MZTextureSystem* MZTextureSystem::instance;
 int MZTextureSystem::_refcount;
@@ -62,13 +62,14 @@ void MZTextureSystem::useColorWithKey(string key)
 	vec3 color;
 	color = getColorWithKey(key)->getAsVector();
 
+	/*
 	GLfloat a[3];
 
 	a[0] = color[0];
 	a[1] = color[1];
 	a[2] = color[2];
 
-	/*
+	
 	a[0] = color.r;
 	a[1] = color.g;
 	a[2] = color.b;
@@ -76,8 +77,8 @@ void MZTextureSystem::useColorWithKey(string key)
 
 	MZShaderSystem* ShaderSystem = MZShaderSystem::getInstance();
 
-	ShaderSystem->setUniform3d(a,"rgbColor","color");
-	ShaderSystem->setUniform3d(a,"rgbColor","particle");
+	ShaderSystem->setUniform3d(value_ptr(color),"rgbColor","color");
+	ShaderSystem->setUniform3d(value_ptr(color),"rgbColor","particle");
 
 	//[[MZShaderSystem getInstance] setUniform3dValue:color.v forVariable:"rgbColor" inProgram:@"color"];
 

@@ -84,6 +84,7 @@ void MZShaderSystem::setUniform1i(int value, char* varName, string name)
 			{
 				location = glGetUniformLocation(_programList[i]->handle(), varName);
 				glUniform1i(location, value);
+
 				return;
 			}
         }

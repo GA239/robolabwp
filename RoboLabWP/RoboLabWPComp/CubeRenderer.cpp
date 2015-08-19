@@ -45,6 +45,7 @@ void CubeRenderer::CreateGLResources()
     a_colorColor = glGetAttribLocation(m_colorProgram, "a_color");
     u_mvpColor = glGetUniformLocation(m_colorProgram, "u_mvp");
 	
+
 	
 	//texture
 	mProgram = glCreateProgram();
