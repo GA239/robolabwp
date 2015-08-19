@@ -5,7 +5,9 @@
 #pragma once
 
 #include "glm\glm.hpp"
+#include <string>
 
+using namespace std;
 using namespace glm;
 
 class MZColor
@@ -17,8 +19,12 @@ public:
 
 	vec3 getAsVector();
 
+	void setName(string name);
+	string name();
+
 private:
 	vec3 _color;
+	string _name;
 
 };
 

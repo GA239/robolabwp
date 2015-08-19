@@ -76,6 +76,9 @@
       <Filter>View\Graphics\Texture system</Filter>
     </ClCompile>
     <ClCompile Include="tga_utils.cpp" />
+    <ClCompile Include="View\Graphics\Texture system\MyTexture.cpp">
+      <Filter>View\Graphics\Texture system</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AngleBase.h" />
@@ -185,6 +188,9 @@
       <Filter>View\Graphics\Texture system</Filter>
     </ClInclude>
     <ClInclude Include="tga_utils.h" />
+    <ClInclude Include="View\Graphics\Texture system\MyTexture.h">
+      <Filter>View\Graphics\Texture system</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Model">

@@ -21,3 +21,12 @@ vec3 MZColor::getAsVector()
 {
     return _color;
 }
+
+void MZColor::setName(string name)
+{
+	_name = name;
+}
+string MZColor::name()
+{
+	return _name;
+}
