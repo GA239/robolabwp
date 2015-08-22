@@ -76,6 +76,21 @@
       <Filter>View\Graphics\Texture system</Filter>
     </ClCompile>
     <ClCompile Include="tga_utils.cpp" />
+    <ClCompile Include="View\Graphics\Texture system\MyTexture.cpp">
+      <Filter>View\Graphics\Texture system</Filter>
+    </ClCompile>
+    <ClCompile Include="View\Graphics\Graphic objects\MZButtonGraphicObject.cpp">
+      <Filter>View\Graphics\Graphic objects</Filter>
+    </ClCompile>
+    <ClCompile Include="View\Graphics\Graphic objects\MZCellsGraphicObject.cpp">
+      <Filter>View\Graphics\Graphic objects</Filter>
+    </ClCompile>
+    <ClCompile Include="View\Graphics\Graphic objects\MZExitGraphicObject.cpp">
+      <Filter>View\Graphics\Graphic objects</Filter>
+    </ClCompile>
+    <ClCompile Include="View\Graphics\Graphic objects\MZFlowGraphicObject.cpp">
+      <Filter>View\Graphics\Graphic objects</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AngleBase.h" />
@@ -185,6 +200,27 @@
       <Filter>View\Graphics\Texture system</Filter>
     </ClInclude>
     <ClInclude Include="tga_utils.h" />
+    <ClInclude Include="View\Graphics\Texture system\MyTexture.h">
+      <Filter>View\Graphics\Texture system</Filter>
+    </ClInclude>
+    <ClInclude Include="View\Graphics\Graphic objects\MZGraphicObject.h">
+      <Filter>View\Graphics\Graphic objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\Basic Types\MZGraphicObjectNames.h">
+      <Filter>Model\Basic Types</Filter>
+    </ClInclude>
+    <ClInclude Include="View\Graphics\Graphic objects\MZButtonGraphicObject.h">
+      <Filter>View\Graphics\Graphic objects</Filter>
+    </ClInclude>
+    <ClInclude Include="View\Graphics\Graphic objects\MZCellsGraphicObject.h">
+      <Filter>View\Graphics\Graphic objects</Filter>
+    </ClInclude>
+    <ClInclude Include="View\Graphics\Graphic objects\MZExitGraphicObject.h">
+      <Filter>View\Graphics\Graphic objects</Filter>
+    </ClInclude>
+    <ClInclude Include="View\Graphics\Graphic objects\MZFlowGraphicObject.h">
+      <Filter>View\Graphics\Graphic objects</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Model">
@@ -219,6 +255,9 @@
     </Filter>
     <Filter Include="View\Graphics\Texture system">
       <UniqueIdentifier>{7dfdf96a-e0df-4f91-a6fc-97f581bd0245}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="View\Graphics\Graphic objects">
+      <UniqueIdentifier>{e006fe07-9f3e-4de4-aba4-8d030053eb0b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

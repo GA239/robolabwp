@@ -25,6 +25,7 @@ public:
 
 	event RequestAdditionalFrameHandler^ RequestAdditionalFrame;
 
+	void clean();
 
     void UpdateForWindowSizeChange(float width, float height);
     void OnFocusChange(bool active);

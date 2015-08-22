@@ -26,6 +26,7 @@ MZShaderSystem::~MZShaderSystem(void)
 		if (_programList[i] != NULL)
 		{
 			delete(_programList[i]);
+			_programList[i] = NULL;
 		}
 	}
 }
@@ -84,6 +85,7 @@ void MZShaderSystem::setUniform1i(int value, char* varName, string name)
 			{
 				location = glGetUniformLocation(_programList[i]->handle(), varName);
 				glUniform1i(location, value);
+
 				return;
 			}
         }

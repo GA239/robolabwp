@@ -22,6 +22,7 @@ MZGeometry::~MZGeometry(void)
 		if (_bufferList[i] != NULL)
 		{
 			delete(_bufferList[i]);
+			_bufferList[i] = NULL;
 		}
 	}
 }

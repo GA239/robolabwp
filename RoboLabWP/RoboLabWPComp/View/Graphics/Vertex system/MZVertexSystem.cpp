@@ -59,11 +59,13 @@ MZVertexSystem::MZVertexSystem(void)
 MZVertexSystem::~MZVertexSystem(void)
 {
 	delete(_vertexArrayObject);
+	_vertexArrayObject = NULL;
 	for (unsigned int i = 0; i < _geometryList.size(); i++)
 	{
 		if (_geometryList[i] != NULL)
 		{
 			delete(_geometryList[i]);
+			_geometryList[i] = NULL;
 		}
 	}
 }

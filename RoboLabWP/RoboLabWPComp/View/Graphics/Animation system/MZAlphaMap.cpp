@@ -37,6 +37,7 @@ MZAlphaMap::~MZAlphaMap(void)
 		free(_map[i]);
     }
 	free(_map);
+	_map = NULL;
 }
 
 bool wallCheckXYD(int x, int y, MZDirection dir)

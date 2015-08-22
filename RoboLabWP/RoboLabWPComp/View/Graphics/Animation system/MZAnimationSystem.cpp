@@ -25,12 +25,15 @@ MZAnimationSystem::MZAnimationSystem(void)
 MZAnimationSystem::~MZAnimationSystem(void)
 {
 	delete(_realAlphaMap);
+	_realAlphaMap = NULL;
 	delete(_visibleAlphaMap);
+	_visibleAlphaMap = NULL;
 	for (unsigned int i = 0; i < _motionList.size(); i++)
 	{
 		if (_motionList[i] != NULL)
 		{
 			delete(_motionList[i]);
+			_motionList[i] = NULL;
 		}
 	}
 }
