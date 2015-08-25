@@ -29,7 +29,7 @@ Direct3DInterop::Direct3DInterop()
 void Direct3DInterop::clean()
 {
 	delete(m_renderer);
-	delete(this);
+	//delete(this);
 }
 
 

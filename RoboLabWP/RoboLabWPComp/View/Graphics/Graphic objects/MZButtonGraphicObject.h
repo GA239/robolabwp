@@ -6,7 +6,7 @@ class MZButtonGraphicObject :
 	public MZGraphicObject
 {
 public:
-	MZButtonGraphicObject(void);
+	MZButtonGraphicObject(void) {}
 	virtual ~MZButtonGraphicObject(void);
 
 	virtual MZGraphicObjectName info() {return GraphicBUTTON;}
