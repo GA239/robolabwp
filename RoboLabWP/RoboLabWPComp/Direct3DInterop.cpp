@@ -28,7 +28,7 @@ Direct3DInterop::Direct3DInterop()
 
 void Direct3DInterop::clean()
 {
-	delete(m_renderer);
+	//delete(m_renderer);
 	//delete(this);
 }
 
@@ -91,8 +91,10 @@ bool Direct3DInterop::IsBackKeyHandled()
 void Direct3DInterop::OnPointerPressed(DrawingSurfaceManipulationHost^ sender, PointerEventArgs^ args)
 {
     PointerPoint^ point = args->CurrentPoint;
-
+	m_renderer->swipeFired();
     //m_renderer->AddTouch(point->PointerId, ::Windows::Foundation::Point(point->RawPosition.X, point->RawPosition.Y));
+	//m_renderer->AddTouch(::Windows::Foundation::Point(point->RawPosition.X, point->RawPosition.Y));
+
 }
 
 void Direct3DInterop::OnPointerMoved(DrawingSurfaceManipulationHost^ sender, PointerEventArgs^ args)

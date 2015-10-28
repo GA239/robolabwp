@@ -55,6 +55,7 @@ void MZWallsGraphicObject::render()
                 MatrixSystem->prepare();
                 TextureSystem->useColorWithKey("wall");
                 
+				AnimationSystem->setOneAlphaValues();
                 if(thisCell->hasWallAtDirection(LEFT))
                 {
                     AnimationSystem->setWallAlphaValues(i, j, LEFT);
@@ -84,6 +85,7 @@ void MZWallsGraphicObject::render()
                     glDrawArrays(GL_LINES, 3, 2);
                     MatrixSystem->pop();
                 }
+				
                 MatrixSystem->pop();
             }
         }

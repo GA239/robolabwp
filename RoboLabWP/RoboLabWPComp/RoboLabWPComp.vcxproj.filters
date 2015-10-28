@@ -91,6 +91,21 @@
     <ClCompile Include="View\Graphics\Graphic objects\MZFlowGraphicObject.cpp">
       <Filter>View\Graphics\Graphic objects</Filter>
     </ClCompile>
+    <ClCompile Include="View\Graphics\Graphic objects\MZNanobotGraphicObject.cpp">
+      <Filter>View\Graphics\Graphic objects</Filter>
+    </ClCompile>
+    <ClCompile Include="View\Graphics\Graphic objects\MZOneWayWallGraphicObject.cpp">
+      <Filter>View\Graphics\Graphic objects</Filter>
+    </ClCompile>
+    <ClCompile Include="View\Graphics\Graphic objects\MZRotatingCellGraphicObject.cpp">
+      <Filter>View\Graphics\Graphic objects</Filter>
+    </ClCompile>
+    <ClCompile Include="View\Graphics\Graphic objects\MZWallsGraphicObject.cpp">
+      <Filter>View\Graphics\Graphic objects</Filter>
+    </ClCompile>
+    <ClCompile Include="View\Graphics\MZRenderingCore.cpp">
+      <Filter>View\Graphics</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AngleBase.h" />
@@ -220,6 +235,21 @@
     </ClInclude>
     <ClInclude Include="View\Graphics\Graphic objects\MZFlowGraphicObject.h">
       <Filter>View\Graphics\Graphic objects</Filter>
+    </ClInclude>
+    <ClInclude Include="View\Graphics\Graphic objects\MZNanobotGraphicObject.h">
+      <Filter>View\Graphics\Graphic objects</Filter>
+    </ClInclude>
+    <ClInclude Include="View\Graphics\Graphic objects\MZOneWayWallGraphicObject.h">
+      <Filter>View\Graphics\Graphic objects</Filter>
+    </ClInclude>
+    <ClInclude Include="View\Graphics\Graphic objects\MZRotatingCellGraphicObject.h">
+      <Filter>View\Graphics\Graphic objects</Filter>
+    </ClInclude>
+    <ClInclude Include="View\Graphics\Graphic objects\MZWallsGraphicObject.h">
+      <Filter>View\Graphics\Graphic objects</Filter>
+    </ClInclude>
+    <ClInclude Include="View\Graphics\MZRenderingCore.h">
+      <Filter>View\Graphics</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

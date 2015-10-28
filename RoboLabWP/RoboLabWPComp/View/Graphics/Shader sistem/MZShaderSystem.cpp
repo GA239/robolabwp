@@ -18,7 +18,6 @@ MZShaderSystem::MZShaderSystem(void)
 	_programList.push_back(particleProgram);
 }
 
-
 MZShaderSystem::~MZShaderSystem(void)
 {
 	for (unsigned int i = 0; i < _programList.size(); i++)

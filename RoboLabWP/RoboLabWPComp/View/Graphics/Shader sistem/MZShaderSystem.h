@@ -25,7 +25,9 @@ public:
 		_refcount++;
 		return instance;
     }
-	void FreeInst() { _refcount--; if(!_refcount) {delete this; instance = NULL;}}
+	void FreeInst() { 
+		_refcount--;
+		if(!_refcount) {delete this; instance = NULL;}}
 
 	
 	GLuint getHandleByName(string name);

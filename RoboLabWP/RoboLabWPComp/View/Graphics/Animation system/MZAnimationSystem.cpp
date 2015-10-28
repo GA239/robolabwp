@@ -60,7 +60,7 @@ void MZAnimationSystem::update()
 	vec3 delta = realVector - _visibleVector;
     //vec3 delta = GLKVector3Subtract(realVector, _visibleVector);
 
-	double length = delta.length();
+	double length = glm::length(delta);
     if(length > MOVE_SPEED)
     {
         vec3 step = vec3(0, 0, 0);

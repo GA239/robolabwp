@@ -16,22 +16,21 @@
 
 MZRenderingCore::MZRenderingCore(void)
 {
-	glClearColor((GLclampf)0.110, (GLclampf)0.137, (GLclampf)0.16, (GLclampf)1.0);
+	glClearColor((GLclampf)0.0705, (GLclampf)0.2588, (GLclampf)0.3019, (GLclampf)1.0);
     glLineWidth(3.0);
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
     _zoom = 1.0;
     
-    _shaderSystem = MZShaderSystem::startSystem();
-    _matrixSystem = MZMatrixSystem::startSystem();
-    _textureSystem = MZTextureSystem::startSystem();
-    _animationSystem = MZAnimationSystem::startSystem();
-    _vertexSystem = MZVertexSystem::startSystem();
+    _shaderSystem = MZShaderSystem::getInstance();
+    _matrixSystem = MZMatrixSystem::getInstance();
+    _textureSystem = MZTextureSystem::getInstance();
+    _animationSystem = MZAnimationSystem::getInstance();
+    _vertexSystem = MZVertexSystem::getInstance();
     
     
     //_graphicObjects = [[NSMutableDictionary alloc] init];
     //[_graphicObjects setObject:[[MZNanobotGraphicObject alloc] init] forKey:@"nanobot"];
-    
 	_graphicObjects.push_back(new MZNanobotGraphicObject());
     
 	_graphicObjects.push_back(new MZCellsGraphicObject());
@@ -95,8 +94,8 @@ void MZRenderingCore::updateNewGame()
 void MZRenderingCore::render()
 {
     glClear(GL_COLOR_BUFFER_BIT);
-    _shaderSystem->useProgramWithName("particle");
-	_shaderSystem->setUniform1i(_frame, "currentFrame", "particle");
+    //_shaderSystem->useProgramWithName("particle");
+	//_shaderSystem->setUniform1i(_frame, "currentFrame", "particle");
 	_matrixSystem->translateWithVector3(_animationSystem->positionShift());
 
 	MZNanobotGraphicObject* nano = NULL;
@@ -122,9 +121,7 @@ void MZRenderingCore::render()
 	}
 
     _matrixSystem->pop();
-
 	nano->render();
-    //[[_graphicObjects objectForKey:@"nanobot" ] render];
 }
 
 void MZRenderingCore::pinchFired()

@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "MZMaze.h"
+#include <fstream> 
 
 
 MZMaze::MZMaze(void)
@@ -9,9 +10,26 @@ MZMaze::MZMaze(void)
     //MZByte* byteArray = [moduleData mutableBytes];
     //int level = [userGameData currentLevel];
 	
-	MZByte* byteArray = new MZByte(100); // временно
+	ifstream is;
+	//is.open("Sound processor.mzp", ios::binary);
+	//is.open("kal.mzp", ios::binary);
+	is.open("Reciever.mzp", ios::binary);
+
+	// get length of file:
+	is.seekg(0, ios::end);
+	int length = is.tellg();
+	is.seekg(0, ios::beg);
+
+	// allocate memory:
+	MZByte* byteArray = (MZByte*)new char[length];
+
+	// read data as a block:
+	//is.read(buffer, length);
+	is.read((char*)byteArray, length);
+	is.close();
+
 	int level = 1;
-    
+
 	int n = byteArray[0];
     int baseOffset = 1 + n * 2 + byteArray[1 + (level - 1) * 2] * 256 + byteArray[2 + (level - 1) * 2]; //вникать не надо. В это можно просто поверить.
 	MZPosition* winningPosition = NULL;
@@ -47,13 +65,18 @@ MZMaze::MZMaze(void)
         }
     }
     
+	delete byteArray;
+
     //_objectList = [[NSMutableArray alloc] init];
     //[_objectList addObject:[[MZExit alloc] initWithPosition:winningPosition]];
 	_objectList.push_back(new MZExit(winningPosition));
 	delete(winningPosition);
+
 	//string currentmodule = "Reciever";
 	int currentModuleNumber = 2;
 	MZPosition *pos;
+
+	/*
 	//if([[userGameData currentModuleName] isEqualToString: @"Reciever"] && level == 1)
     if(currentModuleNumber == 2 && level == 2)
     {
@@ -67,14 +90,16 @@ MZMaze::MZMaze(void)
 		pos = new MZPosition(10,7);
 		_objectList.push_back(new MZButton(pos, DOWN, flow));
 		delete(pos);
-    }
+    }*/
+	/*
     if(currentModuleNumber == 2 && level == 1)
     {
         //[_objectList addObject:[[MZOneWayWall alloc] initWithPosition:[[MZPosition alloc] initWithX:8 andY: 5] andDirection:LEFT]];
 		pos = new MZPosition(8,5);
 		_objectList.push_back(new MZOneWayWall(pos, LEFT));
 		delete(pos);
-    }
+    }*/
+	/*
     if(currentModuleNumber == 2 && level == 3)
     {
 		MZCell* cell = new MZCell((MZByte)1);
@@ -88,7 +113,7 @@ MZMaze::MZMaze(void)
 		pos = new MZPosition(0,12);
 		_objectList.push_back(new MZButton(pos, UP, rotatingCell));
 		delete(pos);
-    }
+    }*/
 }
 
 

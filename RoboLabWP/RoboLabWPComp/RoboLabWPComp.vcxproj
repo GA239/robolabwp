@@ -174,7 +174,12 @@
     <ClInclude Include="View\Graphics\Graphic objects\MZExitGraphicObject.h" />
     <ClInclude Include="View\Graphics\Graphic objects\MZFlowGraphicObject.h" />
     <ClInclude Include="View\Graphics\Graphic objects\MZGraphicObject.h" />
+    <ClInclude Include="View\Graphics\Graphic objects\MZNanobotGraphicObject.h" />
+    <ClInclude Include="View\Graphics\Graphic objects\MZOneWayWallGraphicObject.h" />
+    <ClInclude Include="View\Graphics\Graphic objects\MZRotatingCellGraphicObject.h" />
+    <ClInclude Include="View\Graphics\Graphic objects\MZWallsGraphicObject.h" />
     <ClInclude Include="View\Graphics\Matrix system\MZMatrixSystem.h" />
+    <ClInclude Include="View\Graphics\MZRenderingCore.h" />
     <ClInclude Include="View\Graphics\Shader sistem\MZProgram.h" />
     <ClInclude Include="View\Graphics\Shader sistem\MZShaderSystem.h" />
     <ClInclude Include="View\Graphics\Texture system\MyTexture.h" />
@@ -213,7 +218,12 @@
     <ClCompile Include="View\Graphics\Graphic objects\MZCellsGraphicObject.cpp" />
     <ClCompile Include="View\Graphics\Graphic objects\MZExitGraphicObject.cpp" />
     <ClCompile Include="View\Graphics\Graphic objects\MZFlowGraphicObject.cpp" />
+    <ClCompile Include="View\Graphics\Graphic objects\MZNanobotGraphicObject.cpp" />
+    <ClCompile Include="View\Graphics\Graphic objects\MZOneWayWallGraphicObject.cpp" />
+    <ClCompile Include="View\Graphics\Graphic objects\MZRotatingCellGraphicObject.cpp" />
+    <ClCompile Include="View\Graphics\Graphic objects\MZWallsGraphicObject.cpp" />
     <ClCompile Include="View\Graphics\Matrix system\MZMatrixSystem.cpp" />
+    <ClCompile Include="View\Graphics\MZRenderingCore.cpp" />
     <ClCompile Include="View\Graphics\Shader sistem\MZProgram.cpp" />
     <ClCompile Include="View\Graphics\Shader sistem\MZShaderSystem.cpp" />
     <ClCompile Include="View\Graphics\Texture system\MyTexture.cpp" />

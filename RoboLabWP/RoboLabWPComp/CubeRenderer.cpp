@@ -3,9 +3,8 @@
 
 #include "CubeRenderer.h"
 
-#include "..\shader.h"
-#include "..\fshader.h"
-//#include "esUtil.h"
+//#include "..\shader.h"
+//#include "..\fshader.h"
 #include "tga_utils.h"
 
 using namespace DirectX;
@@ -23,6 +22,12 @@ CubeRenderer::CubeRenderer(): m_loadingComplete(false)
 {
 }
 
+void CubeRenderer::AddTouch(::Windows::Foundation::Point point)
+{
+	float x = point.X;
+	float y = point.Y;
+}
+
 void CubeRenderer::CreateDeviceResources()
 {
 	AngleBase::CreateDeviceResources();
@@ -30,15 +35,21 @@ void CubeRenderer::CreateDeviceResources()
 
 CubeRenderer::~CubeRenderer()
 {
-	
+	/*
 	glDeleteProgram(m_colorProgram);
 	glDeleteProgram(mProgram);
 	glDeleteTextures(1, &mBaseMapTexID);
 	glDeleteTextures(1, &mLightMapTexID);
+	*/
+	delete _renderingCore;
+	game->FreeInst();    
 }
 
 void CubeRenderer::CreateGLResources()
 {
+	MZGame *game = MZGame::getInstance();
+	_renderingCore = new MZRenderingCore();
+	/*
     m_colorProgram = glCreateProgram();
 	glProgramBinaryOES(m_colorProgram, GL_PROGRAM_BINARY_ANGLE, gProgram, sizeof(gProgram));
     a_positionColor = glGetAttribLocation(m_colorProgram, "a_position");
@@ -50,7 +61,7 @@ void CubeRenderer::CreateGLResources()
 	mProgram = glCreateProgram();
 	glProgramBinaryOES(mProgram, GL_PROGRAM_BINARY_ANGLE, gfProgram, sizeof(gfProgram));
 	// Get the attribute locations
-	mPositionLoc = glGetAttribLocation(mProgram, "a_position");
+	mPositionLoc = glGetAttribLocation(mProgram, "a_position"); ????
 	mTexCoordLoc = glGetAttribLocation(mProgram, "a_texCoord");
 	
 	mBaseMapLoc = glGetUniformLocation(mProgram, "s_baseMap");
@@ -65,12 +76,11 @@ void CubeRenderer::CreateGLResources()
 		return;
 	}
 	//texture
-
+	*/
 	//glViewport(0, 0, static_cast<UINT>(m_renderTargetSize.Width), static_cast<UINT>(m_renderTargetSize.Height));
-    glEnable(GL_DEPTH_TEST);
     m_loadingComplete = true;
 }
-
+/*
 GLuint CubeRenderer::loadtextureMOD(const string &path)
 {
     TGAImage img;
@@ -81,6 +91,7 @@ GLuint CubeRenderer::loadtextureMOD(const string &path)
 
     return LoadTextureFromTGAImage(img);
 }
+*/
 
 void CubeRenderer::CreateWindowSizeDependentResources()
 {
@@ -89,12 +100,12 @@ void CubeRenderer::CreateWindowSizeDependentResources()
 
 void CubeRenderer::UpdatePerspectiveMatrix()
 {
-    float fovAngleY = 70.0f * XM_PI / 180.0f;
+    /*float fovAngleY = 70.0f * XM_PI / 180.0f;
     m_projectionMatrix = XMMatrixPerspectiveFovRH(fovAngleY, m_aspectRatio, 0.01f, 100.0f);
 
     // In Windows Phone 8.0 C++ apps, we need to rotate the projection matrix by the 
     // device's current rotation matrix
-    m_projectionMatrix = XMMatrixMultiply(m_orientationMatrix, m_projectionMatrix);
+    m_projectionMatrix = XMMatrixMultiply(m_orientationMatrix, m_projectionMatrix);*/
 }
 
 void CubeRenderer::OnOrientationChanged(Windows::Graphics::Display::DisplayOrientations orientation)
@@ -105,24 +116,52 @@ void CubeRenderer::OnOrientationChanged(Windows::Graphics::Display::DisplayOrien
 
 void CubeRenderer::Update(float timeTotal, float timeDelta)
 {
-	(void) timeDelta;
-
-    XMVECTOR eye = XMVectorSet(0.0f, 0.7f, 1.5f, 0.0f);
-	XMVECTOR at = XMVectorSet(0.0f, -0.1f, 0.0f, 0.0f);
-	XMVECTOR up = XMVectorSet(0.0f, 1.0f, 0.0f, 0.0f);
+	/*
+    XMVECTOR eye = XMVectorSet(0.0f, 0.0f, 0.0f, 1.0f);
+	XMVECTOR at = XMVectorSet(0.0f, 0.0f, -1.0f, 1.0f);
+	XMVECTOR up = XMVectorSet(0.0f, 1.0f, 0.0f, 1.0f);
             
 	m_viewMatrix = XMMatrixLookAtRH(eye, at, up);
 	m_modelMatrix = XMMatrixRotationY(timeTotal * XM_PIDIV4);
+	*/
+	if(!m_loadingComplete)
+		return;
+	_frame++;
+	MZGame* Game = MZGame::getInstance();
+    MZMotion *motion = Game->updateWithFrame(_frame);
+    if(motion != NULL)
+	{
+        _renderingCore->updateStepMadeWithMotion(motion);
+	}
+    _renderingCore->update(_frame);
 }
+
+void CubeRenderer::swipeFired()
+{
+	MZDirection direction;
+	direction = LEFT;
+	MZGame *game = MZGame::getInstance();
+	MZMoveResultCode result = game->makeStepTo(direction);
+	if(result == MOTION_PERFORMED)
+	{
+		MZMotion * motion = new MZMotion(MOVE_SPEED,direction);
+		_renderingCore->updateStepMadeWithMotion(motion);
+	}
+	game->FreeInst();
+}
+
 
 void CubeRenderer::OnRender()
 {
-    XMFLOAT4X4 mvp;
-    XMStoreFloat4x4(&mvp, (XMMatrixMultiply(XMMatrixMultiply(m_modelMatrix, m_viewMatrix), m_projectionMatrix)));
+    //XMFLOAT4X4 mvp;
+    //XMStoreFloat4x4(&mvp, (XMMatrixMultiply(XMMatrixMultiply(m_modelMatrix, m_viewMatrix), m_projectionMatrix)));
 
 	
-    glClearColor(0.098f, 0.098f, 0.439f, 1.000f);
-    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    //glClearColor(0.098f, 0.098f, 0.439f, 1.000f);
+    //glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+	//glClear(GL_COLOR_BUFFER_BIT);
+    _renderingCore->render();
 
 	//////////////////////////////////////////////////////////////////
 /*    glUseProgram(m_colorProgram);
@@ -164,13 +203,14 @@ void CubeRenderer::OnRender()
 	//////////////////////////////////////////////////////////////////
 	
 	//glEnableVertexAttribArray(a_positionColor);
-    glEnableVertexAttribArray(a_colorColor);
+    //glEnableVertexAttribArray(a_colorColor);
     //glVertexAttribPointer(a_positionColor, 3, GL_FLOAT, GL_FALSE, sizeof(VertexPositionColor), cubeVertices);
     //glVertexAttribPointer(a_colorColor, 3, GL_FLOAT, GL_FALSE, sizeof(VertexPositionColor), reinterpret_cast<char*>(cubeVertices) + sizeof(XMFLOAT3));
     //glDrawElements(GL_TRIANGLES, ARRAYSIZE(cubeIndices), GL_UNSIGNED_SHORT, cubeIndices);
     //glDisableVertexAttribArray(a_positionColor);
-    glDisableVertexAttribArray(a_colorColor);
+    //glDisableVertexAttribArray(a_colorColor);
 	
+	/*
 
 	GLfloat vertices[] =
 	{
@@ -187,7 +227,10 @@ void CubeRenderer::OnRender()
 
 	// Clear the color buffer
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+	
+	*/
 
+	/*
 	// Use the program object
 	glUseProgram(mProgram);
 
@@ -217,5 +260,6 @@ void CubeRenderer::OnRender()
 
 	glDisableVertexAttribArray(mPositionLoc);
 	glDisableVertexAttribArray(mTexCoordLoc);
+	*/	
 }
 
